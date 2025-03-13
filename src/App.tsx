@@ -1,7 +1,8 @@
 import "./App.css";
 import { Provider } from "react-redux";
 import { store } from "./redux";
-import { Home } from "./pages/home";
+import { Home } from "./pages/Home";
+
 
 function App() {
     return (

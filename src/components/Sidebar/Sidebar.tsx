@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 export const SideBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);

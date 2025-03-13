@@ -1,4 +1,4 @@
-import "./canvas.css";
+import "./Canvas.css";
 
 export const Canvas: React.FC = () => {
     return (
