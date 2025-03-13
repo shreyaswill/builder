@@ -1,5 +1,5 @@
-import Canvas from "../components/canvas/canvas";
-import SideBar from "../components/sidebar/sidebar";
+import { Canvas } from "../components/canvas/canvas";
+import {SideBar} from "../components/sidebar/sidebar";
 import "./home.css"
 
 export const Home: React.FC = () => {

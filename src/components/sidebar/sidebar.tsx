@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./sidebar.css";
 
-export default function SideBar() {
+export const SideBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
     return (
         <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
