@@ -1,0 +1,7 @@
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #b19f9f;
+    transition: margin-left 0.3s ease;
+    width: 100%;
+}
