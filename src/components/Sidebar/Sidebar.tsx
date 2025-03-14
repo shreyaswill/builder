@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { DeleteElement } from "../DeleteElement/DeleteElement";
 import { AddElement } from "../AddElement/AddElement";
 import { ElementProp } from "../ElementProp/ElementProp";
@@ -5,6 +6,13 @@ import "./Sidebar.css";
 import { Save } from "../Save/Save";
 
 export const SideBar: React.FC = () => {
+    const navigate = useNavigate(); 
+
+    const handleLogout = () => {
+        localStorage.removeItem("username");
+        navigate("/"); 
+    };
+
     return (
         <div className='sidebar'>
             <AddElement />
@@ -12,7 +20,11 @@ export const SideBar: React.FC = () => {
             <br />
             <DeleteElement />
             <br />
-            <Save/>
+            <Save />
+            <br />
+            <button onClick={handleLogout} className="logout-button">
+                Logout
+            </button>
         </div>
     );
 };
