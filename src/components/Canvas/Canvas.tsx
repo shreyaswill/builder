@@ -1,3 +1,5 @@
+
+import "./canvas.css";
 interface CanvasProps {
         width: string;
         height: string;

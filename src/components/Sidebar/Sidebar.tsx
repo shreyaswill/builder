@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./sidebar.css";
 interface SideBarProps {
         setWidth: (value: string) => void;
         setHeight: (value: string) => void;
