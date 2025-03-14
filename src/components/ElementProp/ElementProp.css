@@ -1,19 +1,55 @@
 .controls {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.controls label {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.controls input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;  /* Ensure it doesn't overflow the container */
+    }
+    
+    .padding-header h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .padding-controls {
+        display: grid;
+        grid-template-areas:
+            "top"
+            "left right"
+            "bottom";
+        gap: 1px;
+        justify-items: center;
+    }
+    
+    .side-paddings {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .padding-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70px; /* Adjust width to fit better */
+    }
+    
+    .padding-input {
+        width: 50px; /* Smaller width for the input */
+        font-size: 14px;
+        padding: 3px;
+        text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+        .padding-controls {
+            grid-template-areas:
+                "top top"
+                "left right"
+                "bottom bottom";
+            grid-template-columns: 1fr; /* Stack elements in a single column on smaller screens */
+        }
+    }
+    

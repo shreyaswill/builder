@@ -35,13 +35,13 @@ export const elementProps = createSlice({
                 state.elements[id].paddingLeft = value; // Update padding for the left side
         },
         changePaddingRight: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
-                state.elements[id].paddingLeft = value; // Update padding for the right side
+                state.elements[id].paddingRight = value; // Update padding for the right side
         },
         changePaddingTop: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
-                state.elements[id].paddingLeft = value; // Update padding for the topp  side
+                state.elements[id].paddingTop = value; // Update padding for the topp  side
         },
         changePaddingBottom: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
-                state.elements[id].paddingLeft = value; // Update padding for the bottom  side
+                state.elements[id].paddingBottom = value; // Update padding for the bottom  side
         },
 
 

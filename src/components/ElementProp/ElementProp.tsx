@@ -36,40 +36,50 @@ export const ElementProp: React.FC = () => {
                                         onChange={(e) => dispatch(changeBackground({ id: selected, value: e.target.value }))}
                                 />
                         </label>
-                        <label>
-                                Left Padding:{" "}
-                                <input
-                                        type="number"
-                                        value={props[selected]?.paddingLeft || 0}
-                                        onChange={(e) => dispatch(changePaddingLeft({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-                        <label>
-                                Left Padding:{" "}
-                                <input
-                                        type="number"
-                                        value={props[selected]?.paddingRight || 0}
-                                        onChange={(e) => dispatch(changePaddingRight({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-                        <label>
-                                Left Padding:{" "}
-                                <input
-                                        type="number"
-                                        value={props[selected]?.paddingTop || 0}
-                                        onChange={(e) => dispatch(changePaddingTop({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-                        <label>
-                                Left Padding:{" "}
-                                <input
-                                        type="number"
-                                        value={props[selected]?.paddingBottom || 0}
-                                        onChange={(e) => dispatch(changePaddingBottom({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-
-
-                </div>
+                                {/* Padding Section */}
+                                <div className="padding-header">
+                                        <h5>Padding</h5>
+                                </div>
+                                <div className="padding-controls">
+                                        <div className="padding-label">
+                                                <label>Top:</label>
+                                                <input
+                                                        type="number"
+                                                        className="padding-input"
+                                                        value={props[selected]?.paddingTop || 0}
+                                                        onChange={(e) => dispatch(changePaddingTop({ id: selected, value: Number(e.target.value) }))}
+                                                />
+                                        </div>
+                                        <div className="side-paddings">
+                                                <div className="padding-label">
+                                                        <label>Left:</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.paddingLeft || 0}
+                                                                onChange={(e) => dispatch(changePaddingLeft({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                                <div className="padding-label">
+                                                        <label>Right:</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.paddingRight || 0}
+                                                                onChange={(e) => dispatch(changePaddingRight({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                        </div>
+                                        <div className="padding-label">
+                                                <label>Bottom:</label>
+                                                <input
+                                                        type="number"
+                                                        className="padding-input"
+                                                        value={props[selected]?.paddingBottom || 0}
+                                                        onChange={(e) => dispatch(changePaddingBottom({ id: selected, value: Number(e.target.value) }))}
+                                                />
+                                        </div>
+                                </div>
+                        </div>
         );
 };
