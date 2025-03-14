@@ -1,21 +1,24 @@
 import "./App.css";
 import { Provider } from "react-redux";
-import { store } from "./redux";
+import { PersistGate } from "redux-persist/integration/react";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login/Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { persistor, store } from "./redux";
 
 function App() {
     return (
         <Provider store={store}>
-            <Router>
-                <div className="app-container"> {/* Ensure this is wrapping all content */}
-                    <Routes>
-                        <Route path="/" element={<Login />} />
-                        <Route path="/home" element={<Home />} />
-                    </Routes>
-                </div>
-            </Router>
+            <PersistGate loading={null} persistor={persistor}>
+                <Router>
+                    <div className="app-container"> 
+                        <Routes>
+                            <Route path="/" element={<Login />} />
+                            <Route path="/home" element={<Home />} />
+                        </Routes>
+                    </div>
+                </Router>
+            </PersistGate>
         </Provider>
     );
 }
