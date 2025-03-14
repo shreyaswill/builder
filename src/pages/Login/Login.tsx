@@ -52,7 +52,7 @@ export const Login: React.FC = () => {
                 <div className="login-card">
                     <img src="/logo1.png" alt="Logo" className="logo" />
                     <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
-                        <h2>{isRegistering ? "Register Now" : "Hello There! Are you ready to Login?"}</h2>
+                        <h2 className="login-title">{isRegistering ? "Register Now" : "Welcome! Please log in to continue."}</h2>
                         {error && <p className="error-message">{error}</p>}
                         <input
                             type="text"
