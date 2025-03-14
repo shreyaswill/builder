@@ -38,11 +38,16 @@ export const Login: React.FC = () => {
 
         const handleRegister = (e: React.FormEvent) => {
                 e.preventDefault();
-
+            
+                if (!username || !password) {
+                    setError("Both fields are required.");
+                    return;
+                }
+            
                 setError("");
                 localStorage.setItem("username", username);
                 navigate("/home");
-        };
+            };
 
         return (
                 <div className="background-container">
