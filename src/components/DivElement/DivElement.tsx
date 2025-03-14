@@ -24,6 +24,14 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
                 paddingTop: element.paddingTop,
                 paddingBottom: element.paddingBottom,
 
+                marginLeft: element.marginLeft,
+                marginRight: element.marginRight,
+                marginTop: element.marginTop,
+                marginBottom: element.marginBottom,
+
+                //marginLeft: 100, 
+                
+
                 //tested with FINAL POS....seems to do same,
                 // paddingTop: '200px',
                 // paddingLeft: '700px',

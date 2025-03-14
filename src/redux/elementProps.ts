@@ -10,6 +10,10 @@ export interface ElementProps {
     paddingLeft?: number;
     paddingBottom?: number;
     paddingRight?: number;
+    marginLeft?: number;
+    marginRight?: number;
+    marginTop?: number;
+    marginBottom?: number;
 }
 export type ElementPropState = {
     roots: number[];
@@ -31,6 +35,8 @@ export const elementProps = createSlice({
         changeWidth: (state, action: PayloadAction<{id: number, value: number}>) => {
             state.elements[action.payload.id].width = action.payload.value;
         },
+
+        
         changePaddingLeft: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
                 state.elements[id].paddingLeft = value; // Update padding for the left side
         },
@@ -45,6 +51,21 @@ export const elementProps = createSlice({
         },
 
 
+
+        changeMarginLeft: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
+                state.elements[id].marginLeft = value; 
+        },
+        changeMarginRight: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
+                state.elements[id].marginRight = value; 
+        },
+        changeMarginTop: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
+                state.elements[id].marginTop = value; 
+        },
+        changeMarginBottom: (state, {payload: {id, value}}: PayloadAction<{id: number, value: number}>) => {
+                state.elements[id].marginBottom = value; 
+        },
+
+        
         
         changeBackground: (state, {payload: {id, value}}: PayloadAction<{id: number, value: string}>) => {
             state.elements[id].backgroundColor = value;
@@ -57,6 +78,10 @@ export const elementProps = createSlice({
                 paddingRight: 100,
                 paddingTop: 100,
                 paddingBottom: 100,
+                marginLeft: 100,
+                marginRight: 100,
+                marginTop: 100,
+                marginBottom: 100,
                 backgroundColor: 'white',
                 children: [],
                 parent: pid
@@ -84,4 +109,4 @@ const deleteChildrenRecusively = (state: ElementPropState, id: number) => {
     delete state.elements[id];
 }
 
-export const { changeHeight, changeWidth, changeBackground, addElement, deleteElement, changePaddingLeft, changePaddingRight, changePaddingTop, changePaddingBottom } = elementProps.actions
+export const { changeHeight, changeWidth, changeBackground, changeMarginLeft, changeMarginRight, changeMarginTop, changeMarginBottom, addElement, deleteElement, changePaddingLeft, changePaddingRight, changePaddingTop, changePaddingBottom } = elementProps.actions
