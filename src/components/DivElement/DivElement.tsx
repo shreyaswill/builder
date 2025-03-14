@@ -19,6 +19,16 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
                 height: element.height,
                 width: element.width,
                 backgroundColor: element.backgroundColor,
+                paddingLeft: element.paddingLeft,
+                paddingRight: element.paddingRight,
+                paddingTop: element.paddingTop,
+                paddingBottom: element.paddingBottom,
+
+                //tested with FINAL POS....seems to do same,
+                // paddingTop: '200px',
+                // paddingLeft: '700px',
+                // paddingBottom: '200px',
+                // paddingRight: '200px',       
             }}
             className={`dynamic-div ${selected === id ? "selected" : ""}`}
             onClick={(e) => {
