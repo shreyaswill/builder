@@ -1,20 +1,25 @@
 .delete-div-btn {
-    background: #27ae60;
-    color: black;
+    background: #0056b3;
+    color: white;
     border: none;
     padding: 12px;
     cursor: pointer;
     font-size: 14px;
     width: 100%;
+    border-radius: 60px;
     text-align: center;
     border-radius: 6px;
+    max-width: 200px;
+    margin-top: 100px;
     transition: background 0.3s ease;
 }
 
 .delete-div-btn {
-    background: #96c9ff;
+    background: #0056b3;
+    border-radius: 60px;
 }
 
 .delete-div-btn:hover {
-    background: #d0e7ff;
+    background: #ff9a34;
+    border-radius: 60px;
 }

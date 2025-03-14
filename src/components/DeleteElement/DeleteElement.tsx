@@ -12,7 +12,7 @@ export const DeleteElement: React.FC = () => {
     };
     return (
         <button className="delete-div-btn" onClick={deleteE} disabled={!selected}>
-            Delete Selected
+            Delete Div
         </button>
     );
 };

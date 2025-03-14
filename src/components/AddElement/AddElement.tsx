@@ -11,6 +11,6 @@ export const AddElement: React.FC = () => {
         dispatch(incrementId());
     }
     return (
-        <button className="add-div-btn" onClick={addDiv}>Add Div</button>
+        <button className="add-div-btn" onClick={addDiv}>Div</button>
     );
 }

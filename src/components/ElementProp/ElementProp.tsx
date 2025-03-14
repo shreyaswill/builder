@@ -59,11 +59,13 @@ export const ElementProp: React.FC = () => {
 
                         {/* Padding Section */}
                         <div className="padding-header">
-                                <h5>Padding</h5>
+                        <br></br>
+                        <h2 className="sidebar-title">Padding</h2>
+                        <hr className='divider' />
                         </div>
                         <div className="padding-controls">
                                 <div className="padding-label">
-                                        <label>Top:</label>
+                                        <label>Top</label>
                                         <input
                                                 type="number"
                                                 className="padding-input"
@@ -73,7 +75,7 @@ export const ElementProp: React.FC = () => {
                                 </div>
                                 <div className="side-paddings">
                                         <div className="padding-label">
-                                                <label>Left:</label>
+                                                <label>Left</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
@@ -82,7 +84,7 @@ export const ElementProp: React.FC = () => {
                                                 />
                                         </div>
                                         <div className="padding-label">
-                                                <label>Right:</label>
+                                                <label>Right</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
@@ -92,7 +94,7 @@ export const ElementProp: React.FC = () => {
                                         </div>
                                 </div>
                                 <div className="padding-label">
-                                        <label>Bottom:</label>
+                                        <label>Bottom</label>
                                         <input
                                                 type="number"
                                                 className="padding-input"
@@ -106,11 +108,12 @@ export const ElementProp: React.FC = () => {
 
                         {/* margin section */}
                         <div className="padding-header">
-                                <h5>Margin</h5>
+                        <h2 className="sidebar-title">Margin</h2>
+                        <hr className='divider' />
                         </div>
                         <div className="padding-controls">
                                 <div className="padding-label">
-                                        <label>Top:</label>
+                                        <label>Top</label>
                                         <input
                                                 type="number"
                                                 className="padding-input"
@@ -120,7 +123,7 @@ export const ElementProp: React.FC = () => {
                                 </div>
                                 <div className="side-paddings">
                                         <div className="padding-label">
-                                                <label>Left:</label>
+                                                <label>Left</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
@@ -129,7 +132,7 @@ export const ElementProp: React.FC = () => {
                                                 />
                                         </div>
                                         <div className="padding-label">
-                                                <label>Right:</label>
+                                                <label>Right</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
@@ -139,7 +142,7 @@ export const ElementProp: React.FC = () => {
                                         </div>
                                 </div>
                                 <div className="padding-label">
-                                        <label>Bottom:</label>
+                                        <label>Bottom</label>
                                         <input
                                                 type="number"
                                                 className="padding-input"
