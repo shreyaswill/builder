@@ -1,5 +1,5 @@
-.add-div-btn {
-    background: #2788ae;
+.save-btn {
+    background: #27ae60;
     color: white;
     border: none;
     padding: 12px;
@@ -11,6 +11,6 @@
     transition: background 0.3s ease;
 }
 
-.add-div-btn:hover {
-    background: #219150;
+.save-btn:hover {
+    background: #129649;
 }

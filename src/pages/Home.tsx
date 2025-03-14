@@ -1,6 +1,6 @@
 import { Canvas } from "../components/Canvas/Canvas";
 import { SideBar } from "../components/Sidebar/Sidebar";
-import "./home.css";
+import "./Home.css";
 
 export const Home: React.FC = () => {
     return (
