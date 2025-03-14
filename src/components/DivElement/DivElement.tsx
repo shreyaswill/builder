@@ -23,20 +23,11 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
                 paddingRight: element.paddingRight,
                 paddingTop: element.paddingTop,
                 paddingBottom: element.paddingBottom,
-
                 marginLeft: element.marginLeft,
                 marginRight: element.marginRight,
                 marginTop: element.marginTop,
                 marginBottom: element.marginBottom,
-
-                //marginLeft: 100, 
-                
-
-                //tested with FINAL POS....seems to do same,
-                // paddingTop: '200px',
-                // paddingLeft: '700px',
-                // paddingBottom: '200px',
-                // paddingRight: '200px',       
+                border: `${element.borderWidth}px solid ${element.borderColor}`,
             }}
             className={`dynamic-div ${selected === id ? "selected" : ""}`}
             onClick={(e) => {
