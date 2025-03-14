@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
     useEffect(() => {
         // Redirect to login if no username is found in localStorage
         if (!localStorage.getItem("username")) {
-            navigate("/");
+            navigate("/", { replace: true });
         }
     }, [navigate]);
 

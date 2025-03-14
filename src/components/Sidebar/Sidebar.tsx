@@ -10,7 +10,7 @@ export const SideBar: React.FC = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("username");
-        navigate("/"); 
+        navigate("/", { replace: true }); 
     };
 
     return (
