@@ -48,9 +48,9 @@ export const Login: React.FC = () => {
                 <div className="background-container">
                         <div className="login-container">
                                 <div className="login-card">
-                                        <img src="/logo.png" alt="Logo" className="logo" />
+                                        <img src="/logo1.png" alt="Logo" className="logo" />
                                         <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
-                                                <h2>{isRegistering ? "Register" : "Login"}</h2>
+                                                <h2>{isRegistering ? "Register Now" : "Hello There ! Are you ready to Login ? "}</h2>
                                                 {error && <p className="error-message">{error}</p>}
                                                 <input
                                                         type="text"
@@ -64,7 +64,7 @@ export const Login: React.FC = () => {
                                                         value={password}
                                                         onChange={(e) => setPassword(e.target.value)}
                                                 />
-                                                <button type="submit">{isRegistering ? "Register" : "Login"}</button>
+                                                <button type="submit">{isRegistering ? "Register" : "Sign In"}</button>
                                         </form>
                                         <div className="toggle-auth">
                                                 <button
