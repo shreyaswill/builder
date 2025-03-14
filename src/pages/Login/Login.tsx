@@ -6,6 +6,7 @@ export const Login: React.FC = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [isRegistering, setIsRegistering] = useState(false); // New state to track registration
     const navigate = useNavigate(); // Initialize navigate function
 
     const validatePassword = (password: string) => {
@@ -38,12 +39,28 @@ export const Login: React.FC = () => {
         navigate("/home"); // Redirect to Home
     };
 
+    const handleRegister = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        setError("");
+        localStorage.setItem("username", username);
+        navigate("/home"); // Redirect to Home
+    };
+
+    const backgroundStyle = {
+        backgroundImage: "url('./wall.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100vh", 
+    };
+
     return (
-        <div className="login-container">
+        <div className="login-container" style={backgroundStyle}>
             <div className="login-card">
                 <img src="/logo.png" alt="Logo" className="logo" />
-                <form onSubmit={handleLogin} className="login-form">
-                    <h2>Login</h2>
+                <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
+                    <h2>{isRegistering ? "Register" : "Login"}</h2> {/* Dynamic title */}
                     {error && <p className="error-message">{error}</p>}
                     <input
                         type="text"
@@ -57,8 +74,16 @@ export const Login: React.FC = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button type="submit">Login</button>
+                    <button type="submit">{isRegistering ? "Register" : "Login"}</button>
                 </form>
+                <div className="toggle-auth">
+                    <button
+                        className="register-button"
+                        onClick={() => setIsRegistering(!isRegistering)} 
+                    >
+                        {isRegistering ? "Already have an account? Login" : "Don't have an account? Register"}
+                    </button>
+                </div>
             </div>
         </div>
     );
