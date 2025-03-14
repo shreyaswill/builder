@@ -73,6 +73,7 @@ export const Login: React.FC = () => {
                                                                 setIsRegistering(!isRegistering);
                                                                 setUsername(""); 
                                                                 setPassword("");
+                                                                setError("");
                                                         }}
                                                 >
                                                         {isRegistering ? "Already have an account? Login" : "Don't have an account? Register"}
