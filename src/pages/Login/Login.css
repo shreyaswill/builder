@@ -21,6 +21,26 @@
         padding-left: 500px;
     }
     
+
+    .password-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .password-container input {
+        flex: 1;
+        padding-right: 30px;
+    }
+    
+    .password-toggle {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: #555;
+    }
+
+    
     .login-card {
         background: white;
         padding: 40px 30px;
