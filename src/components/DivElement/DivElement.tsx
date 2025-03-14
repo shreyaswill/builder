@@ -1,17 +1,35 @@
-
 import { useDispatch, useSelector } from "react-redux";
+import { ElementPropState } from "../../redux/elementProps";
+import { changeElement, SelectedPropState } from "../../redux/selectedProps";
 import "./DivElement.css"
-import { incrementId, SelectedPropState } from "../../redux/selectedProps";
-import { addElement } from "../../redux/elementProps";
-export const DivElement: React.FC = () => {
-    const lastId = useSelector((state: {selected: SelectedPropState}) => state.selected.lastId);
+
+export const DivElement: React.FC<{ id: number }> = ({ id }) => {
+
     const dispatch = useDispatch();
-    const addDiv = () => {
-        console.log("====>Adding");
-        dispatch(addElement(lastId));
-        dispatch(incrementId());
+    const element = useSelector((state: {eprops: ElementPropState}) => state.eprops.elements[id]);
+    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.element);
+
+    if (!element) return null;
+    const updateSelected = (id:number | null) => {
+        if (id !== null) dispatch(changeElement(id));
     }
     return (
-        <button className="add-div-btn" onClick={addDiv}>Add Div</button>
+        <div
+            style={{
+                height: element.height,
+                width: element.width,
+                backgroundColor: element.backgroundColor,
+            }}
+            className={`dynamic-div ${selected === id ? "selected" : ""}`}
+            onClick={(e) => {
+                e.stopPropagation();
+                updateSelected(selected === id ? null : id)}
+            }
+        >
+            <p>Div {id}</p>
+            {element.children.length > 0 && element.children.map((childId) => (
+                <DivElement key={childId} id={childId} />
+            ))}
+        </div>
     );
-}
+};

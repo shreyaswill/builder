@@ -1,12 +1,12 @@
 import { DeleteElement } from "../DeleteElement/DeleteElement";
-import { DivElement } from "../DivElement/DivElement";
+import { AddElement } from "../AddElement/AddElement";
 import { ElementProp } from "../ElementProp/ElementProp";
 import "./sidebar.css";
 
 export const SideBar: React.FC = () => {
     return (
         <div className={`sidebar`}>
-            <DivElement />
+            <AddElement />
             <ElementProp />
             <br />
             <DeleteElement />

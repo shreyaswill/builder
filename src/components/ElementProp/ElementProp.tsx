@@ -3,7 +3,7 @@ import "./ElementProp.css";
 import { SelectedPropState } from "../../redux/selectedProps";
 import { changeHeight, changeWidth, changeBackground, ElementPropState } from "../../redux/elementProps";
 export const ElementProp: React.FC = () => {
-    const props = useSelector((state: { eprops: ElementPropState }) => state.eprops);
+    const props = useSelector((state: { eprops: ElementPropState }) => state.eprops.elements);
     const selected = useSelector((state: { selected: SelectedPropState }) => state.selected.element)!;
     const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ export const ElementProp: React.FC = () => {
                 Width:{" "}
                 <input
                     type="number"
-                    disabled={!selected}
+                    disabled={selected === undefined}
                     value={props[selected]?.width || 0}
                     onChange={(e) => dispatch(changeWidth({ id: selected, value: Number(e.target.value) }))}
                 />
@@ -22,7 +22,7 @@ export const ElementProp: React.FC = () => {
                 Height:{" "}
                 <input
                     type="number"
-                    disabled={!selected}
+                    disabled={selected === undefined}
                     value={props[selected]?.height || 0}
                     onChange={(e) => dispatch(changeHeight({ id: selected, value: Number(e.target.value) }))}
                 />
@@ -31,7 +31,7 @@ export const ElementProp: React.FC = () => {
                 Background Color:{" "}
                 <input
                     type="color"
-                    disabled={!selected}
+                    disabled={selected === undefined}
                     value={props[selected]?.backgroundColor || 'white'}
                     onChange={(e) => dispatch(changeBackground({ id: selected, value: e.target.value }))}
                 />
