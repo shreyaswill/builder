@@ -9,7 +9,7 @@ export const Canvas: React.FC = () => {
     const dispatch = useDispatch();
     return (
         <div className="main-content" onClick={() => dispatch(changeElement(undefined))}>
-            {eprops.roots.length === 0 && <h1>Welcome to Shrey's builder</h1>}
+            {eprops.roots.length === 0 && <h1>Let's get started !</h1>}
             {eprops.roots.map((id) => <DivElement key={id} id={id} />)}
         </div>
     );

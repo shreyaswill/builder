@@ -16,6 +16,11 @@
         border: 1px solid #5baaff;
     }
     
+    body, .sidebar {
+        overflow-x: hidden;
+    }
+
+    
     .sidebar {
         width: 50vw; /* Use vw for width */
         background: linear-gradient(135deg, #fafcff, #4db4ff);
@@ -43,7 +48,7 @@
     }
     
     .sidebar::-webkit-scrollbar-thumb {
-        background: #5baaff;
+        background: #6bbaff;
         border-radius: 1rem;
         transition: background 0.3s ease;
     }
