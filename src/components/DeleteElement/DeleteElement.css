@@ -1,4 +1,4 @@
-.add-div-btn {
+.delete-div-btn {
     background: #27ae60;
     color: white;
     border: none;
@@ -11,6 +11,10 @@
     transition: background 0.3s ease;
 }
 
-.add-div-btn:hover {
-    background: #219150;
+.delete-div-btn {
+    background: #e74c3c;
+}
+
+.delete-div-btn:hover {
+    background: #c0392b;
 }

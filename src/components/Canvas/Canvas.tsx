@@ -1,30 +1,28 @@
+import { useDispatch, useSelector } from "react-redux";
+import "./Canvas.css";
+import { ElementProps, ElementPropState } from "../../redux/elementProps";
+import { changeElement, SelectedPropState } from "../../redux/selectedProps";
 
-import "./canvas.css";
-interface CanvasProps {
-        width: string;
-        height: string;
-        padding: string;
-        bgColor: string;
-        divs: number[];
-        setSelectedDiv: (id: number | null) => void;
-        selectedDiv: number | null;
+export const Canvas: React.FC = () => {
+
+    const eprops = useSelector((state: {eprops: ElementPropState}) => state.eprops);
+    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.element);
+    const dispatch = useDispatch();
+    const updateSelected = (id:string | null) => {
+        if (id) dispatch(changeElement(id));
     }
-    
-    export const Canvas: React.FC<CanvasProps> = ({ width, height, padding, bgColor, divs, setSelectedDiv, selectedDiv }) => {
-        return (
-            <div className="main-content" style={{ width, height, padding, backgroundColor: bgColor }}>
-                <h1>Welcome to Home</h1>
-                <p>This is the main content area.</p>
-                {divs.map((id) => (
-                    <div 
-                        key={id} 
-                        className={`dynamic-div ${selectedDiv === id ? "selected" : ""}`} 
-                        onClick={() => setSelectedDiv(selectedDiv === id ? null : id)}
-                    >
-                        Div {id}
-                    </div>
-                ))}
-            </div>
-        );
-    };
-    
+    return (
+        <div className="main-content">
+            {Object.entries(eprops).length === 0 && <h1>Welcome to Shrey's builder</h1>}
+            {Object.entries(eprops).map(([id, p]: [string, ElementProps]) => (
+                <div style={{height: p.height, width: p.width, backgroundColor: p.backgroundColor}}
+                    key={id}
+                    className={`dynamic-div ${selected === id ? "selected" : ""}`}
+                    onClick={() => updateSelected(selected === id ? null : id)}
+                >
+                    Div {id}
+                </div>
+            ))}
+        </div>
+    );
+};

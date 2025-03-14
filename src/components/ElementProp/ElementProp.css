@@ -1,0 +1,19 @@
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.controls label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.controls input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

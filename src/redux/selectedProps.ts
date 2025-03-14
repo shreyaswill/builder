@@ -1,18 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface SelectedProps {
+export interface SelectedPropState {
     element?: string
+    lastId: number
 }
 
-const initialState: SelectedProps = {};
-export const selectedProps = createSlice({
+const initialState: SelectedPropState = {lastId: 0};
+export const selectedProps= createSlice({
     name: "selectedProps",
     initialState,
     reducers: {
-        changeElement: (state, {payload: id}: PayloadAction<string>) => {
+        changeElement: (state, {payload: id}: PayloadAction<string | undefined>) => {
             state.element = id;
+        },
+        incrementId: (state) => {
+            state.lastId += 1;
         }
     },
 });
 
-export const { changeElement } = selectedProps.actions
+export const { changeElement, incrementId } = selectedProps.actions

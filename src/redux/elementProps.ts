@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface ElementProps {
+export interface ElementProps {
     height: number,
     width: number,
     backgroundColor: string
 }
+export type ElementPropState = {[key: string]: ElementProps};
 
-const initialState: {[key: string]: ElementProps} = {};
+const initialState:ElementPropState  = {};
 
 export const elementProps = createSlice({
     name: "elementProps",
@@ -20,8 +21,18 @@ export const elementProps = createSlice({
         },
         changeBackground: (state, {payload: {id, value}}: PayloadAction<{id: string, value: string}>) => {
             state[id].backgroundColor = value;
+        },
+        addElement: (state, {payload}) => {
+            state[payload] = {
+                height: 100,
+                width: 100,
+                backgroundColor: 'white'
+            }
+        },
+        deleteElement: (state, {payload}) => {
+            delete state[payload];
         }
     },
 });
 
-export const { changeHeight, changeWidth, changeBackground } = elementProps.actions
+export const { changeHeight, changeWidth, changeBackground, addElement, deleteElement } = elementProps.actions
