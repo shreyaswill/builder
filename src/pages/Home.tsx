@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
 
     return (
         <div className="container">
-            <SideBar />
+            <SideBar /> 
             <Canvas />
         </div>
     );

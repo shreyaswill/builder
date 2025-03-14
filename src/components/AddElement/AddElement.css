@@ -1,5 +1,5 @@
 .add-div-btn {
-    background: #2788ae;
+    background: #007bff;
     color: white;
     border: none;
     padding: 12px;
@@ -12,5 +12,5 @@
 }
 
 .add-div-btn:hover {
-    background: #219150;
+    background: #5baaff;
 }

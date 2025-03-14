@@ -1,5 +1,5 @@
 .save-btn {
-    background: #27ae60;
+    background: #007bff;
     color: white;
     border: none;
     padding: 12px;
@@ -12,5 +12,5 @@
 }
 
 .save-btn:hover {
-    background: #129649;
+    background: #5baaff;
 }
