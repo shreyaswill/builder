@@ -7,10 +7,11 @@ export const AddElement: React.FC = () => {
     const selected = useSelector((state: {selected: SelectedPropState}) => state.selected);
     const dispatch = useDispatch();
     const addDiv = () => {
-        dispatch(addElement({pid: selected.element, id: selected.lastId}));
+        dispatch(addElement({pid: selected.elementId, id: selected.nextId}));
+
         dispatch(incrementId());
     }
     return (
         <button className="add-div-btn" onClick={addDiv}>Add Div</button>
-    );
+    )
 }

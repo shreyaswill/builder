@@ -6,6 +6,7 @@ export const Login: React.FC = () => {
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
         const [error, setError] = useState("");
+        const [showPassword, setShowPassword] = useState(false);
         const [isRegistering, setIsRegistering] = useState(false);
         const navigate = useNavigate();
 
@@ -21,11 +22,6 @@ export const Login: React.FC = () => {
                         setError("Both fields are required.");
                         return;
                 }
-                if (username !== "admin" || password !== "Admin123") {
-                        setError("Invalid username or password.");
-                        return;
-                }
-
                 if (!validatePassword(password)) {
                         setError("Password must be at least 8 characters long, contain one uppercase letter, one number, and no special characters.");
                         return;
@@ -38,16 +34,16 @@ export const Login: React.FC = () => {
 
         const handleRegister = (e: React.FormEvent) => {
                 e.preventDefault();
-            
+
                 if (!username || !password) {
-                    setError("Both fields are required.");
-                    return;
+                        setError("Both fields are required.");
+                        return;
                 }
-            
+
                 setError("");
                 localStorage.setItem("username", username);
                 navigate("/home");
-            };
+        };
 
         return (
                 <div className="background-container">
@@ -63,12 +59,21 @@ export const Login: React.FC = () => {
                                                         value={username}
                                                         onChange={(e) => setUsername(e.target.value)}
                                                 />
-                                                <input
-                                                        type="password"
-                                                        placeholder="Password"
-                                                        value={password}
-                                                        onChange={(e) => setPassword(e.target.value)}
-                                                />
+                                                <div className="password-container">
+                                                        <input
+                                                                type={showPassword ? "text" : "password"}
+                                                                placeholder="Password"
+                                                                value={password}
+                                                                onChange={(e) => setPassword(e.target.value)}
+                                                        />
+                                                        <button
+                                                                type="button"
+                                                                className="toggle-password"
+                                                                onClick={() => setShowPassword(!showPassword)}
+                                                        >
+                                                                {showPassword ? "Hide" : "Show"}
+                                                        </button>
+                                                </div>
                                                 <button type="submit">{isRegistering ? "Register" : "Sign In"}</button>
                                         </form>
                                         <div className="toggle-auth">
@@ -76,7 +81,7 @@ export const Login: React.FC = () => {
                                                         className="register-button"
                                                         onClick={() => {
                                                                 setIsRegistering(!isRegistering);
-                                                                setUsername(""); 
+                                                                setUsername("");
                                                                 setPassword("");
                                                                 setError("");
                                                         }}

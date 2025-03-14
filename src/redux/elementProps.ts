@@ -23,8 +23,8 @@ export type ElementPropState = {
 }
 
 const initialState:ElementPropState  = {
-    roots: [],
-    elements: {}
+    roots: [], //all elements at the root level (main level) parent component - has only IDs 
+    elements: {} // child element - master list of all elements - use the ROOT IDa and go find it's elements
 };
 
 export const elementProps = createSlice({
