@@ -21,7 +21,7 @@
 
 .dynamic-div.selected {
     background: #e74c3c;
-    color: white;
+    color: green;
     border: 2px solid black;
     transform: scale(1.05);
 }
