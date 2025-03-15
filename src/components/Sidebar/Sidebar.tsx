@@ -24,9 +24,8 @@ export const SideBar: React.FC = () => {
             <hr className='divider' />
             <br></br>
             {selectedId && <ElementProp />}
-
             <br />
-            <DeleteElement />
+            {selectedId && <DeleteElement />}
             <br />
             <br />
             <button onClick={handleLogout} className="logout-button">
@@ -35,3 +34,5 @@ export const SideBar: React.FC = () => {
         </div>
     );
 };
+
+
