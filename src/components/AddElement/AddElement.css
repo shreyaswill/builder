@@ -12,7 +12,8 @@
         max-width: 200px;
         background-color: #10c6c6;
         margin-right: 310px;
-        border-radius: 30px;        
+        border-radius: 30px;  
+        margin-bottom: 94px;      
         transition: background 0.3s ease;
 }
 

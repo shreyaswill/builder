@@ -13,9 +13,16 @@ export const ElementProp: React.FC = () => {
         <>
             <h2 className="sidebar-title">Styling</h2>
             <hr className="divider" />
+
+            <br></br>
             <div className="controls">
-                <label>
-                    Width:{" "}
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+
+            <div style={{ display: "flex", alignItems: "center" }}>
+
+
+            <label style={{ width: "150px" }}>Width</label>
                     <input
                         type="number"
                         disabled={selectedId === undefined}
@@ -30,10 +37,14 @@ export const ElementProp: React.FC = () => {
                                 })
                             )
                         }
+                        style={{ marginLeft: "8px", flex: 1 }}
                     />
-                </label>
-                <label>
-                    Height:{" "}
+
+                </div>
+        
+                
+        <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Height</label>
                     <input
                         type="number"
                         disabled={selectedId === undefined}
@@ -48,28 +59,21 @@ export const ElementProp: React.FC = () => {
                                 })
                             )
                         }
+                        style={{ marginLeft: "8px", flex: 1 }}
                     />
-                </label>
-                <label>
-                    Background Color:{" "}
-                    <input
-                        type="color"
-                        disabled={selectedId === undefined}
-                        value={props?.backgroundColor || "#ffffff"}
-                        onChange={(e) =>
-                            selectedId &&
-                            dispatch(
-                                updateElement({
-                                    property: "backgroundColor",
-                                    id: selectedId,
-                                    value: e.target.value,
-                                })
-                            )
-                        }
-                    />
-                </label>
-                <label>
-                    Border Thickness:{" "}
+
+                    </div>
+
+                    <br></br>
+
+             
+                  
+                
+
+                    
+                
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Border- Thickness</label>
                     <input
                         type="number"
                         disabled={selectedId === undefined}
@@ -84,11 +88,18 @@ export const ElementProp: React.FC = () => {
                                 })
                             )
                         }
+                        style={{ marginLeft: "8px", flex: 1 }}
                     />
-                </label>
+              </div>
+                  
+           
 
-                <label>
-                    Border Color:{" "}
+
+
+
+
+                <div style={{ display: "flex", alignItems: "center" }}>
+                <label style={{ width: "150px" }}>Border Color</label>
                     <input
                         type="color"
                         disabled={selectedId === undefined}
@@ -103,18 +114,44 @@ export const ElementProp: React.FC = () => {
                                 })
                             )
                         }
+                        style={{ marginLeft: "8px", flex: 1 }}
                     />
-                </label>
+               </div>
+
+
+               <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>BG Color</label>
+                    <input
+                        type="color"
+                        disabled={selectedId === undefined}
+                        value={props?.backgroundColor || "#ffffff"}
+                        onChange={(e) =>
+                            selectedId &&
+                            dispatch(
+                                updateElement({
+                                    property: "backgroundColor",
+                                    id: selectedId,
+                                    value: e.target.value,
+                                })
+                            )
+                        }
+                        style={{ marginLeft: "8px", flex: 1 }}
+                    />
+
+                    </div>
+
+
+               </div>
 
                 {/* Padding Section */}
                 <div className="padding-header">
-                    <br></br>
-                    <h2 className="sidebar-title">Padding</h2>
-                    <hr className="divider" />
+                 
                 </div>
+                <div className="outer-box">
+                       
                 <div className="padding-controls">
                     <div className="padding-label">
-                        <label>Top</label>
+                        <label>TOP</label>
                         <input
                             type="number"
                             className="padding-input"
@@ -133,7 +170,7 @@ export const ElementProp: React.FC = () => {
                     </div>
                     <div className="side-paddings">
                         <div className="padding-label">
-                            <label>Left</label>
+                            <label>LEFT</label>
                             <input
                                 type="number"
                                 className="padding-input"
@@ -150,8 +187,9 @@ export const ElementProp: React.FC = () => {
                                 }
                             />
                         </div>
+                        <div className="center">Padding</div>
                         <div className="padding-label">
-                            <label>Right</label>
+                            <label>RIGHT</label>
                             <input
                                 type="number"
                                 className="padding-input"
@@ -170,7 +208,7 @@ export const ElementProp: React.FC = () => {
                         </div>
                     </div>
                     <div className="padding-label">
-                        <label>Bottom</label>
+                        <label>BOTTOM</label>
                         <input
                             type="number"
                             className="padding-input"
@@ -188,15 +226,16 @@ export const ElementProp: React.FC = () => {
                         />
                     </div>
                 </div>
+                </div>
 
                 {/* margin section */}
                 <div className="padding-header">
-                    <h2 className="sidebar-title">Margin</h2>
-                    <hr className="divider" />
+                   
                 </div>
+                <div className="outer-box">
                 <div className="padding-controls">
                     <div className="padding-label">
-                        <label>Top</label>
+                        <label>TOP</label>
                         <input
                             type="number"
                             className="padding-input"
@@ -215,7 +254,7 @@ export const ElementProp: React.FC = () => {
                     </div>
                     <div className="side-paddings">
                         <div className="padding-label">
-                            <label>Left</label>
+                            <label>LEFT</label>
                             <input
                                 type="number"
                                 className="padding-input"
@@ -232,8 +271,9 @@ export const ElementProp: React.FC = () => {
                                 }
                             />
                         </div>
+                        <div className="center">Margin</div>
                         <div className="padding-label">
-                            <label>Right</label>
+                            <label>RIGHT</label>
                             <input
                                 type="number"
                                 className="padding-input"
@@ -252,7 +292,7 @@ export const ElementProp: React.FC = () => {
                         </div>
                     </div>
                     <div className="padding-label">
-                        <label>Bottom</label>
+                        <label>BOTTOM</label>
                         <input
                             type="number"
                             className="padding-input"
@@ -271,6 +311,7 @@ export const ElementProp: React.FC = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     );
 };

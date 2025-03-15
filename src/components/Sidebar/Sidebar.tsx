@@ -15,7 +15,7 @@ export const SideBar: React.FC = () => {
 
     return (
         <div className='sidebar'>
-           <h2 className='sidebar-title2'>Styling</h2>
+           <h2 className='sidebar-title2'>Elements</h2>
             <hr className='divider' />
             <br></br>
             <AddElement />
