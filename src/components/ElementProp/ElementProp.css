@@ -1,19 +1,59 @@
 .controls {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 20px;
+    border-color: #007bff;
+    color: black;
+    gap: 10px;
+    max-width: 100%; 
 }
 
-.controls label {
-    font-size: 14px;
+.padding-header h3 {
+    margin: 0;
+    font-size: 16px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.controls input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.padding-controls {
+    display: grid;
+    grid-template-areas:
+        "top"
+        "left right"
+        "bottom";
+    gap: 1px;
+    justify-items: center;
+}
+
+.side-paddings {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.padding-label {
+    display: flex;
+    flex-direction: column;
+    color:black;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+}
+
+.padding-input {
+    width: 90px;
+    font-size: 14px;
+    height: 40px; 
+    padding: 3px;
+    border-color: #007bff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .padding-controls {
+        grid-template-areas:
+            "top top"
+            "left right"
+            "bottom bottom";
+        grid-template-columns: 1fr;
+    }
 }

@@ -8,3 +8,17 @@
     align-items: flex-start;
     overflow: auto;
 }
+
+.dragtext {
+    background-color: rgb(29, 61, 221);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 8px;
+    border-radius: 4px;
+}
+.dragging {
+    background-color: aliceblue;
+}

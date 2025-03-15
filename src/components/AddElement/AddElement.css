@@ -1,16 +1,22 @@
 .add-div-btn {
-    background: #2788ae;
-    color: white;
+    background: white;
+    color: black;
     border: none;
     padding: 12px;
     cursor: pointer;
     font-size: 14px;
     width: 100%;
+    margin-top: 30px;
     text-align: center;
-    border-radius: 6px;
+    max-width: 200px;
+    border-style: solid;
+    border-color: #007bff;
+    border-width: 2px; 
+    border-radius: 30px;        
     transition: background 0.3s ease;
+    
 }
 
 .add-div-btn:hover {
-    background: #219150;
+    background: #d4e9ff;
 }
