@@ -1,31 +1,84 @@
 .controls {
         display: flex;
         flex-direction: column;
-        border-color: #007bff;
-        color: black;
+        font-weight: 400;
+        color: white;
         gap: 10px;
         max-width: 100%;
 
     }
-    
+
+    .controls input {
+        border: 2px solid #007bff; 
+        background-color: #003568;
+        color: white;
+      
+    }
+
+    .controls input:focus {
+        color: black;  /* Change text color to black on focus */
+        outline: none; /* Optionally, remove the default focus outline */
+    }
+
     .padding-header h3 {
         margin: 0;
         font-size: 16px;
         font-weight: bold;
         margin-bottom: 10px;
     }
-    
     .padding-controls {
         display: grid;
         grid-template-areas:
             "top"
-            "left right"
+            "left center right"
             "bottom";
-        /* Increased gap between all items */
-        row-gap: 40px; /* Keep row gap as desired */
-        column-gap: 20px; /* Added to increase the gap between left and right */
         justify-items: center;
+        gap: 20px; /* Adjust gap as needed */
     }
+    
+    .top {
+        grid-area: top;
+    }
+    
+    .left {
+        grid-area: left;
+    }
+    
+    .center {
+        grid-area: center;
+    }
+    
+    .right {
+        grid-area: right;
+    }
+    
+    .bottom {
+        grid-area: bottom;
+    }
+    
+    .center {
+        grid-area: center;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        color: aliceblue;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .outer-box
+    {
+        border: 2px solid #053465; 
+        background-color: #08233e;
+        padding: 20px; 
+        margin: 10px; 
+        height: 345px;
+        width: 390px;
+        
+    }
+
 
     .side-paddings {
         display: flex;
@@ -36,19 +89,28 @@
     .padding-label {
         display: flex;
         flex-direction: column;
-        color:black;
+        color: white;    
         align-items: center;
+        
         justify-content: center;
         width: 90px; /* Adjust width to fit better */
     }
     
     .padding-input {
-        width: 90px; /* Smaller width for the input */
+        width: 90px;
         font-size: 14px;
-        height: 40px; 
+        height: 40px;
         padding: 3px;
+        color: white;
+        background-color: #003568; 
         border-color: #007bff;
         text-align: center;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+    
+    .padding-input:focus {
+        background-color: white; /* Dark blue background when typing */
+        color: black; /* Text color changes to white when typing */
     }
     
     @media (max-width: 600px) {

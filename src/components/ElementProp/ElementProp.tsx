@@ -9,98 +9,112 @@ export const ElementProp: React.FC = () => {
 
         return (
                 <div className="controls">
-                        <label>
-                                Width:{" "}
-                                <input
-                                        type="number"
-                                        disabled={selected === undefined}
-                                        value={props[selected]?.width || 0}
-                                        onChange={(e) => dispatch(changeWidth({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-                        <label>
-                                Height:{" "}
-                                <input
-                                        type="number"
-                                        disabled={selected === undefined}
-                                        value={props[selected]?.height || 0}
-                                        onChange={(e) => dispatch(changeHeight({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
-                        <label>
-                                Background Color:{" "}
-                                <input
-                                        type="color"
-                                        disabled={selected === undefined}
-                                        value={props[selected]?.backgroundColor || 'white'}
-                                        onChange={(e) => dispatch(changeBackground({ id: selected, value: e.target.value }))}
-                                />
-                        </label>
-                        <label>
-                                Border Thickness:{" "}
-                                <input
-                                        type="number"
-                                        disabled={selected === undefined}
-                                        value={props[selected]?.borderWidth || 2}
-                                        onChange={(e) => dispatch(changeBorderWidth({ id: selected, value: Number(e.target.value) }))}
-                                />
-                        </label>
 
-                        <label>
-                                Border Color:{" "}
-                                <input
-                                        type="color"
-                                        disabled={selected === undefined}
-                                        value={props[selected]?.borderColor || "#000000"}
-                                        onChange={(e) => dispatch(changeBorderColor({ id: selected, value: e.target.value }))}
-                                />
-                        </label>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Width</label>
+                                        <input
+                                                type="number"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.width || 0}
+                                                onChange={(e) => dispatch(changeWidth({ id: selected, value: Number(e.target.value) }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
 
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Height</label>
+                                        <input
+                                                type="number"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.height || 0}
+                                                onChange={(e) => dispatch(changeHeight({ id: selected, value: Number(e.target.value) }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
+
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Border Thickness</label>
+                                        <input
+                                                type="number"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.borderWidth || 2}
+                                                onChange={(e) => dispatch(changeBorderWidth({ id: selected, value: Number(e.target.value) }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
+
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Background Color</label>
+                                        <input
+                                                type="color"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.backgroundColor || 'white'}
+                                                onChange={(e) => dispatch(changeBackground({ id: selected, value: e.target.value }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
+
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Border Color</label>
+                                        <input
+                                                type="color"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.borderColor || "#000000"}
+                                                onChange={(e) => dispatch(changeBorderColor({ id: selected, value: e.target.value }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
+                        </div>
 
                         {/* Padding Section */}
                         <div className="padding-header">
-                        <br></br>
-                        <h2 className="sidebar-title">Padding</h2>
-                        <hr className='divider' />
+                                <br></br>
+                                {/* <h2 className="sidebar-title">Padding</h2> */}
+                                {/* <hr className='divider' /> */}
+
                         </div>
-                        <div className="padding-controls">
-                                <div className="padding-label">
-                                        <label>Top</label>
-                                        <input
-                                                type="number"
-                                                className="padding-input"
-                                                value={props[selected]?.paddingTop || 0}
-                                                onChange={(e) => dispatch(changePaddingTop({ id: selected, value: Number(e.target.value) }))}
-                                        />
-                                </div>
-                                <div className="side-paddings">
+                        <div className="outer-box">
+                                <div className="padding-controls">
                                         <div className="padding-label">
-                                                <label>Left</label>
+                                                <label>TOP</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
-                                                        value={props[selected]?.paddingLeft || 0}
-                                                        onChange={(e) => dispatch(changePaddingLeft({ id: selected, value: Number(e.target.value) }))}
+                                                        value={props[selected]?.paddingTop || 0}
+                                                        onChange={(e) => dispatch(changePaddingTop({ id: selected, value: Number(e.target.value) }))}
                                                 />
                                         </div>
+                                        <div className="side-paddings">
+                                                <div className="padding-label">
+                                                        <label>LEFT</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.paddingLeft || 0}
+                                                                onChange={(e) => dispatch(changePaddingLeft({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                                <div className="center">PADDING</div>
+                                                <div className="padding-label">
+                                                        <label>RIGHT</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.paddingRight || 0}
+                                                                onChange={(e) => dispatch(changePaddingRight({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                        </div>
                                         <div className="padding-label">
-                                                <label>Right</label>
+                                                <label>BOTTOM</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
-                                                        value={props[selected]?.paddingRight || 0}
-                                                        onChange={(e) => dispatch(changePaddingRight({ id: selected, value: Number(e.target.value) }))}
+                                                        value={props[selected]?.paddingBottom || 0}
+                                                        onChange={(e) => dispatch(changePaddingBottom({ id: selected, value: Number(e.target.value) }))}
                                                 />
                                         </div>
-                                </div>
-                                <div className="padding-label">
-                                        <label>Bottom</label>
-                                        <input
-                                                type="number"
-                                                className="padding-input"
-                                                value={props[selected]?.paddingBottom || 0}
-                                                onChange={(e) => dispatch(changePaddingBottom({ id: selected, value: Number(e.target.value) }))}
-                                        />
                                 </div>
                         </div>
 
@@ -108,50 +122,52 @@ export const ElementProp: React.FC = () => {
 
                         {/* margin section */}
                         <div className="padding-header">
-                        <h2 className="sidebar-title">Margin</h2>
-                        <hr className='divider' />
+                                {/* <h2 className="sidebar-title">Margin</h2>
+                        <hr className='divider' /> */}
                         </div>
-                        <div className="padding-controls">
-                                <div className="padding-label">
-                                        <label>Top</label>
-                                        <input
-                                                type="number"
-                                                className="padding-input"
-                                                value={props[selected]?.marginTop || 0}
-                                                onChange={(e) => dispatch(changeMarginTop({ id: selected, value: Number(e.target.value) }))}
-                                        />
-                                </div>
-                                <div className="side-paddings">
+                        <div className="outer-box">
+                                <div className="padding-controls">
                                         <div className="padding-label">
-                                                <label>Left</label>
+                                                <label>TOP</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
-                                                        value={props[selected]?.marginLeft || 0}
-                                                        onChange={(e) => dispatch(changeMarginLeft({ id: selected, value: Number(e.target.value) }))}
+                                                        value={props[selected]?.marginTop || 0}
+                                                        onChange={(e) => dispatch(changeMarginTop({ id: selected, value: Number(e.target.value) }))}
                                                 />
                                         </div>
+                                        <div className="side-paddings">
+                                                <div className="padding-label">
+                                                        <label>LEFT</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.marginLeft || 0}
+                                                                onChange={(e) => dispatch(changeMarginLeft({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                                <div className="center">MARGIN</div>
+                                                <div className="padding-label">
+                                                        <label>RIGHT</label>
+                                                        <input
+                                                                type="number"
+                                                                className="padding-input"
+                                                                value={props[selected]?.marginRight || 0}
+                                                                onChange={(e) => dispatch(changeMarginRight({ id: selected, value: Number(e.target.value) }))}
+                                                        />
+                                                </div>
+                                        </div>
                                         <div className="padding-label">
-                                                <label>Right</label>
+                                                <label>BOTTOM</label>
                                                 <input
                                                         type="number"
                                                         className="padding-input"
-                                                        value={props[selected]?.marginRight || 0}
-                                                        onChange={(e) => dispatch(changeMarginRight({ id: selected, value: Number(e.target.value) }))}
+                                                        value={props[selected]?.marginBottom || 0}
+                                                        onChange={(e) => dispatch(changeMarginBottom({ id: selected, value: Number(e.target.value) }))}
                                                 />
                                         </div>
                                 </div>
-                                <div className="padding-label">
-                                        <label>Bottom</label>
-                                        <input
-                                                type="number"
-                                                className="padding-input"
-                                                value={props[selected]?.marginBottom || 0}
-                                                onChange={(e) => dispatch(changeMarginBottom({ id: selected, value: Number(e.target.value) }))}
-                                        />
-                                </div>
                         </div>
-
 
                 </div>
         );

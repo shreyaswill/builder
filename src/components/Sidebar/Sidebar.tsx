@@ -23,6 +23,7 @@ export const SideBar: React.FC = () => {
             <br></br>
             <h2 className='sidebar-title2'>Styling</h2>
             <hr className='divider' />
+            <br></br>
             <ElementProp />
             <br />
             <DeleteElement />
