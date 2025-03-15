@@ -1,28 +1,93 @@
-.controls {
-    display: flex;
-    flex-direction: column;
-    border-color: #007bff;
-    color: black;
-    gap: 10px;
-    max-width: 100%; 
-}
+.controls {                          /* Width */
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        color: white;
+        gap: 10px;
+        max-width: 100%;
+        font-size: 25px;
+        margin-right: 2px;
+    }
+
+
+.controls input {
+        border: 2px solid #007bff; 
+        background-color: #003568;
+        color: white;
+        margin-right: 22px;
+        margin-bottom: 1px;
+
+    }
+
+.controls input:focus {                         /* TOP FOCUS */
+        color: PINK; 
+        outline: none; 
+    }
 
 .padding-header h3 {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 10px;
+
 }
 
 .padding-controls {
     display: grid;
     grid-template-areas:
         "top"
-        "left right"
+        "left center right"
         "bottom";
     gap: 1px;
     justify-items: center;
+    gap: 20px;
 }
+
+.top {
+    grid-area: top;
+}
+
+.left {
+    grid-area: left;
+}
+
+.center {
+    grid-area: center;
+
+}
+
+.right {
+    grid-area: right;
+}
+.bottom {
+        grid-area: bottom;
+    }
+
+    .center {                  /* padding and margin */               
+        grid-area: center;
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        color: #ffffff;
+        /* background-color: rgb(77, 88, 183); */
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+
+    .outer-box    /* the box */
+    {
+        border: 2px solid #053465; 
+        background-color: #08233e;
+        padding: 20px; 
+        margin: 10px; 
+        height: 400x;
+        width: 520px;
+        margin-left: 1px;
+    }
+
 
 .side-paddings {
     display: flex;
@@ -30,23 +95,34 @@
     justify-content: center;
 }
 
-.padding-label {
+.padding-label {          /* TOP */     
     display: flex;
     flex-direction: column;
-    color:black;
-    align-items: center;
+    color:white;
+    /* align-items: center; */
     justify-content: center;
+    text-align: center;
     width: 90px;
 }
 
 .padding-input {
-    width: 90px;
-    font-size: 14px;
-    height: 40px; 
-    padding: 3px;
-    border-color: #007bff;
-    text-align: center;
-}
+        width: 90px;
+        font-size: 14px;
+        height: 40px;
+        padding: 3px;
+        color: white;
+        background-color: #003568; 
+        border-color: #007bff;
+        text-align: left;
+        padding-left: 40px;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .padding-input:focus {
+        background-color: white;
+        color: black;
+    }
 
 @media (max-width: 600px) {
     .padding-controls {
