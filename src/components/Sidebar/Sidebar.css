@@ -68,12 +68,12 @@
     }
     
     .sidebar::-webkit-scrollbar-track {
-        background: linear-gradient(to top, #add8e6, #ffffff);
+        background: linear-gradient(to top, #07223d, #07223d);
         border-radius: 1rem; 
     }
     
     .sidebar::-webkit-scrollbar-thumb {
-        background: #7fccff;
+        background: #10c7c5;
         border-radius: 1rem;
         transition: background 0.3s ease;
     }

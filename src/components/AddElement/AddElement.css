@@ -18,7 +18,7 @@
 }
 
 .add-div-btn:hover {
-    background: #d4e9ff;
+        background: #5df6f5;
 }
 
 
@@ -31,7 +31,7 @@
     .tooltip .tooltip-text {
         visibility: hidden;
         background-color: rgb(255, 255, 255);
-        color: #696969;
+        color: #000000;
         text-align: center;
         padding: 8px;
         border-radius: 12px;
