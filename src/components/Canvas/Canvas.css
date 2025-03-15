@@ -4,9 +4,9 @@
     background: #ecf0f1;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     align-items: flex-start;
     overflow: auto;
+    
 }
 
 .dragtext {
