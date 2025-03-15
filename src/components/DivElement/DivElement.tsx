@@ -7,7 +7,7 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
 
     const dispatch = useDispatch();
     const element = useSelector((state: {eprops: ElementPropState}) => state.eprops.elements[id]);
-    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.element);
+    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.elementId);
 
     if (!element) return null;
     const updateSelected = (id:number | null) => {

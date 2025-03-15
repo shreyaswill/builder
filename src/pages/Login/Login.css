@@ -1,24 +1,22 @@
-/* General styles */
-/* General styles */
 .background-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-    
-    .background-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures the video covers the entire area */
-        z-index: -1; /* Sends the video behind the content */
-    }
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 
 
 .login-title {
@@ -32,11 +30,11 @@
 
 .login-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    position: absolute; /* Absolute positioning to override any other styles */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
 }
 
 .password-container {
@@ -74,7 +72,7 @@
 }
 
 .login-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
 }
 
 .logo {

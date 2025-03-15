@@ -4,7 +4,6 @@ import storage from "redux-persist/lib/storage";
 import { elementProps } from "./elementProps";
 import { selectedProps } from "./selectedProps";
 
-
 const persistConfig = {
     key: "root",
     storage,

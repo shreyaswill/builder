@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Canvas } from "../components/Canvas/Canvas";
-import { SideBar } from "../components/Sidebar/Sidebar";
 import "./Home.css";
+import { SideBar } from "../../components/Sidebar/Sidebar";
+import { Canvas } from "../../components/Canvas/Canvas";
 
 export const Home: React.FC = () => {
     const navigate = useNavigate();

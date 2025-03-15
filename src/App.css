@@ -1,22 +1,18 @@
-/* Set full height for html and body */
 html, body, #root {
-        height: 100%;
-      }
-      
-      /* Flexbox centering for App component */
-      .app-container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      /* Reset margin and padding as you're doing already */
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
+  height: 100%;
+}
+
+.app-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

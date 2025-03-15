@@ -4,7 +4,7 @@ import { SelectedPropState } from "../../redux/selectedProps";
 import { changeHeight, changePaddingLeft, changeBorderWidth, changeBorderColor, changePaddingRight, changePaddingTop, changeMarginLeft, changeMarginRight, changeMarginTop, changeMarginBottom, changePaddingBottom, changeWidth, changeBackground, ElementPropState } from "../../redux/elementProps";
 export const ElementProp: React.FC = () => {
         const props = useSelector((state: { eprops: ElementPropState }) => state.eprops.elements);
-        const selected = useSelector((state: { selected: SelectedPropState }) => state.selected.element)!;
+        const selected = useSelector((state: { selected: SelectedPropState }) => state.selected.elementId)!;
         const dispatch = useDispatch();
 
         return (

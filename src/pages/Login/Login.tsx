@@ -48,7 +48,6 @@ export const Login: React.FC = () => {
 
     return (
         <div className="background-container">
-            {/* Video background */}
             <video autoPlay loop muted className="background-video">
                 <source src="./Div.mp4" type="video/mp4" />
             </video>

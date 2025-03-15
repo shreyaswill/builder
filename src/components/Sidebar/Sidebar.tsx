@@ -3,7 +3,6 @@ import { DeleteElement } from "../DeleteElement/DeleteElement";
 import { AddElement } from "../AddElement/AddElement";
 import { ElementProp } from "../ElementProp/ElementProp";
 import "./Sidebar.css";
-import { Save } from "../Save/Save";
 
 export const SideBar: React.FC = () => {
     const navigate = useNavigate(); 
@@ -13,7 +12,6 @@ export const SideBar: React.FC = () => {
         navigate("/", { replace: true });
     };
 
-   
     return (
         <div className='sidebar'>
             <h2 className='sidebar-title'>Elements</h2>
@@ -26,8 +24,6 @@ export const SideBar: React.FC = () => {
             <ElementProp />
             <br />
             <DeleteElement />
-            <br />
-            <Save />
             <br />
             <button onClick={handleLogout} className="logout-button">
                 Logout
