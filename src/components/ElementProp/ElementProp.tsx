@@ -32,9 +32,10 @@ export const ElementProp: React.FC = () => {
                                                 style={{ marginLeft: "8px", flex: 1 }}
                                         />
                                 </div>
+                                <br></br>
 
                                 <div style={{ display: "flex", alignItems: "center" }}>
-                                        <label style={{ width: "150px" }}>Border Thickness</label>
+                                        <label style={{ width: "150px" }}>Thickness</label>
                                         <input
                                                 type="number"
                                                 disabled={selected === undefined}
@@ -45,7 +46,7 @@ export const ElementProp: React.FC = () => {
                                 </div>
 
                                 <div style={{ display: "flex", alignItems: "center" }}>
-                                        <label style={{ width: "150px" }}>Background Color</label>
+                                        <label style={{ width: "150px" }}>BG Color</label>
                                         <input
                                                 type="color"
                                                 disabled={selected === undefined}
@@ -95,7 +96,7 @@ export const ElementProp: React.FC = () => {
                                                                 onChange={(e) => dispatch(changePaddingLeft({ id: selected, value: Number(e.target.value) }))}
                                                         />
                                                 </div>
-                                                <div className="center">PADDING</div>
+                                                <div className="center">Padding</div>
                                                 <div className="padding-label">
                                                         <label>RIGHT</label>
                                                         <input
@@ -146,7 +147,7 @@ export const ElementProp: React.FC = () => {
                                                                 onChange={(e) => dispatch(changeMarginLeft({ id: selected, value: Number(e.target.value) }))}
                                                         />
                                                 </div>
-                                                <div className="center">MARGIN</div>
+                                                <div className="center">Margin</div>
                                                 <div className="padding-label">
                                                         <label>RIGHT</label>
                                                         <input
