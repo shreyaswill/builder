@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
+import { RootState, DispatchType } from "../../redux";
+import { getSelectedEleProps, updateElement } from "../../redux/build";
+import { getSelectedElementId } from "../../redux/selected";
 import "./ElementProp.css";
-import { SelectedPropState } from "../../redux/selectedProps";
-import { changeHeight, changePaddingLeft, changeBorderWidth, changeBorderColor, changePaddingRight, changePaddingTop, changeMarginLeft, changeMarginRight, changeMarginTop, changeMarginBottom, changePaddingBottom, changeWidth, changeBackground, ElementPropState } from "../../redux/elementProps";
 export const ElementProp: React.FC = () => {
-        const props = useSelector((state: { eprops: ElementPropState }) => state.eprops.elements);
-        const selected = useSelector((state: { selected: SelectedPropState }) => state.selected.element)!;
-        const dispatch = useDispatch();
+    const selectedId = useSelector((state: RootState) => getSelectedElementId(state));
+    const props = useSelector((state: RootState) => getSelectedEleProps(state));
+
+    const dispatch = useDispatch<DispatchType>();
 
         return (
                 <div className="controls">
@@ -168,5 +170,7 @@ export const ElementProp: React.FC = () => {
                         </div>
 
                 </div>
-        );
+            </div>
+        </>
+    );
 };

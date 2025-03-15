@@ -1,4 +1,3 @@
-/* Set full height for html and body */
 html, body, #root {
         height: 100%;
       }

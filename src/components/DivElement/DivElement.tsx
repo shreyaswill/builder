@@ -1,42 +1,63 @@
+import { useDrop } from "react-dnd";
 import { useDispatch, useSelector } from "react-redux";
-import { ElementPropState } from "../../redux/elementProps";
-import { changeElement, SelectedPropState } from "../../redux/selectedProps";
-import "./DivElement.css"
+import { DraggableTypes } from "../../constants";
+import { DispatchType, RootState } from "../../redux";
+import { getEleProps } from "../../redux/build";
+import { changeElement, getSelectedElementId } from "../../redux/selected";
+import "./DivElement.css";
 
 export const DivElement: React.FC<{ id: number }> = ({ id }) => {
 
-    const dispatch = useDispatch();
-    const element = useSelector((state: {eprops: ElementPropState}) => state.eprops.elements[id]);
-    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.element);
+    const dispatch = useDispatch<DispatchType>();
+    const props = useSelector((state: RootState) => getEleProps(state, id));
+    const selectedId = useSelector((state: RootState) => getSelectedElementId(state));
 
-    if (!element) return null;
+    const [{ isOver, canDrop }, dropRef] = useDrop(() => ({
+        accept: DraggableTypes.DIV_ELEMENT,
+        drop: (item, monitor) => {
+            const isOwner = monitor.isOver({shallow: true});
+            if (isOwner)
+                return {id}//parent id
+        },
+        collect: (monitor) => {
+            return {
+                isOver: monitor.isOver({ shallow: true }),
+                canDrop: monitor.canDrop()
+            };
+        },
+    }));
+
+    if (!props) return null;
     const updateSelected = (id:number | null) => {
         if (id !== null) dispatch(changeElement(id));
     }
+    
+    const isActive = canDrop && isOver
+
     return (
-        <div
+        <div ref={dropRef as unknown as React.RefObject<HTMLDivElement>}
             style={{
-                height: element.height,
-                width: element.width,
-                backgroundColor: element.backgroundColor,
-                paddingLeft: element.paddingLeft,
-                paddingRight: element.paddingRight,
-                paddingTop: element.paddingTop,
-                paddingBottom: element.paddingBottom,
-                marginLeft: element.marginLeft,
-                marginRight: element.marginRight,
-                marginTop: element.marginTop,
-                marginBottom: element.marginBottom,
-                border: `${element.borderWidth}px solid ${element.borderColor}`,
+                height: props.height,
+                width: props.width,
+                backgroundColor: props.backgroundColor,
+                paddingLeft: props.paddingLeft,
+                paddingRight: props.paddingRight,
+                paddingTop: props.paddingTop,
+                paddingBottom: props.paddingBottom,
+                marginLeft: props.marginLeft,
+                marginRight: props.marginRight,
+                marginTop: props.marginTop,
+                marginBottom: props.marginBottom,
+                border: `${props.borderWidth}px solid ${props.borderColor}`,
             }}
-            className={`dynamic-div ${selected === id ? "selected" : ""}`}
+            className={`dynamic-div ${selectedId === id ? "selected" : ""}`}
             onClick={(e) => {
                 e.stopPropagation();
-                updateSelected(selected === id ? null : id)}
+                updateSelected(selectedId === id ? null : id)}
             }
         >
-            <p>Div {id}</p>
-            {element.children.length > 0 && element.children.map((childId) => (
+            <p>{isActive ? 'Drop here' : `Div ${id}`}</p>
+            {props.children.length > 0 && props.children.map((childId) => (
                 <DivElement key={childId} id={childId} />
             ))}
         </div>

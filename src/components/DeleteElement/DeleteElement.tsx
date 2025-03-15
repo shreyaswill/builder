@@ -1,17 +1,21 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./DeleteElement.css";
-import { deleteElement } from "../../redux/elementProps";
-import { changeElement, SelectedPropState } from "../../redux/selectedProps";
+import { deleteElement } from "../../redux/build";
+import { changeElement, getSelectedElementId } from "../../redux/selected";
+import { DispatchType, RootState } from "../../redux";
 
 export const DeleteElement: React.FC = () => {
-    const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.element);
-    const dispatch = useDispatch();
+    const selectedId = useSelector((state: RootState) => getSelectedElementId(state));
+    const dispatch = useDispatch<DispatchType>();
     const deleteE = () => {
-        dispatch(deleteElement(selected));
-        dispatch(changeElement(undefined));
+        if (selectedId) {
+            dispatch(deleteElement(selectedId));
+            dispatch(changeElement(undefined));
+        }
     };
+
     return (
-        <button className="delete-div-btn" onClick={deleteE} disabled={!selected}>
+        <button className="delete-div-btn" onClick={deleteE} disabled={!selectedId}>
             Delete Div
         </button>
     );
