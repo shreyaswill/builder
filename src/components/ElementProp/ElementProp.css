@@ -17,7 +17,7 @@
         border: 2px solid #007bff; 
         background-color: #003568;
         color: white;
-        margin-right: 22px;
+        margin-right: 8px;
         margin-bottom: 1px;
       
     }
@@ -72,7 +72,6 @@
         font-weight: 700;
         font-family: 'Inter', sans-serif;
         color: #ffffff;
-        /* background-color: rgb(77, 88, 183); */
         margin-top: 50px;
         margin-bottom: 40px;
         margin-left: 20px;
@@ -132,7 +131,7 @@
                 "top top"
                 "left right"
                 "bottom bottom";
-            grid-template-columns: 1fr; /* Stack elements in a single column on smaller screens */
+            grid-template-columns: 1fr; /* Stacking elements in a single column on smaller screens */
         }
     }
     

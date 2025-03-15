@@ -5,8 +5,7 @@ import { addElement } from "../../redux/build";
 import { useDrag } from "react-dnd";
 import { DraggableTypes } from "../../constants";
 import { DispatchType, RootState } from "../../redux";
-
-//https://react-dnd.github.io/react-dnd/docs/api/hooks-overview
+//
 
 export const AddElement: React.FC = () => {
     const selected = useSelector((state: RootState) => getSelectedIds(state))!;

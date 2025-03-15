@@ -124,7 +124,6 @@
         background-color: #c6d2e4;
     }
     
-    /* Hover effects for buttons */
     button, .toggle-btn, .logout-button {
         transition: transform 0.2s ease;
     }

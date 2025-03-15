@@ -20,8 +20,10 @@
 }
 
 .dynamic-div.selected {
-    background: #e74c3c;
     color: green;
-    border: 2px solid rgb(6, 137, 139) !important;
-    transform: scale(1.05);
+    background: #00cc44;
+    border: 3px solid #008f28 !important;
+    box-shadow: 0px 0px 15px rgba(0, 255, 100, 0.8);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
