@@ -6,62 +6,64 @@
         gap: 10px;
         max-width: 100%;
         font-size: 25px;
+      
         margin-right: 2px;
+
+    
+
     }
 
-
-.controls input {
+    .controls input {
         border: 2px solid #007bff; 
         background-color: #003568;
         color: white;
         margin-right: 22px;
         margin-bottom: 1px;
-
+      
     }
 
-.controls input:focus {                         /* TOP FOCUS */
+    .controls input:focus {                         /* TOP FOCUS */
         color: PINK; 
         outline: none; 
     }
 
-.padding-header h3 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.padding-controls {
-    display: grid;
-    grid-template-areas:
-        "top"
-        "left center right"
-        "bottom";
-    gap: 1px;
-    justify-items: center;
-    gap: 20px;
-}
-
-.top {
-    grid-area: top;
-}
-
-.left {
-    grid-area: left;
-}
-
-.center {
-    grid-area: center;
-
-}
-
-.right {
-    grid-area: right;
-}
-.bottom {
+    .padding-header h3 {                    
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        
+    }
+    .padding-controls {
+        display: grid;
+        grid-template-areas:
+            "top"
+            "left center right"
+            "bottom";
+        justify-items: center;
+        gap: 20px;
+    }
+    
+    .top {
+        grid-area: top;
+    }
+    
+    .left {
+        grid-area: left;
+    }
+    
+    .center {
+        grid-area: center;
+        
+    }
+    
+    .right {
+        grid-area: right;
+    }
+    
+    .bottom {
         grid-area: bottom;
     }
-
+     
     .center {                  /* padding and margin */               
         grid-area: center;
         text-align: center;
@@ -89,23 +91,23 @@
     }
 
 
-.side-paddings {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.padding-label {          /* TOP */     
-    display: flex;
-    flex-direction: column;
-    color:white;
-    /* align-items: center; */
-    justify-content: center;
-    text-align: center;
-    width: 90px;
-}
-
-.padding-input {
+    .side-paddings {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .padding-label {                        /* TOP */
+        display: flex;
+        flex-direction: column;
+        color: white;    
+        
+        text-align: center;
+        justify-content: center;
+        width: 90px;
+    }
+    
+    .padding-input {
         width: 90px;
         font-size: 14px;
         height: 40px;
@@ -116,20 +118,21 @@
         text-align: left;
         padding-left: 40px;
         transition: background-color 0.3s ease;
-
+  
     }
-
+    
     .padding-input:focus {
         background-color: white;
         color: black;
     }
-
-@media (max-width: 600px) {
-    .padding-controls {
-        grid-template-areas:
-            "top top"
-            "left right"
-            "bottom bottom";
-        grid-template-columns: 1fr;
+    
+    @media (max-width: 600px) {
+        .padding-controls {
+            grid-template-areas:
+                "top top"
+                "left right"
+                "bottom bottom";
+            grid-template-columns: 1fr; /* Stack elements in a single column on smaller screens */
+        }
     }
-}
+    
