@@ -21,7 +21,7 @@ export const AddElement: React.FC = () => {
             end: (item, monitor) => {
                 const resultFromDrop = monitor.getDropResult<{id: number | undefined}>();
                 if (item && resultFromDrop) {
-                    alert(`You dropped ${selected.nextId} into ${resultFromDrop.id ?? 'Canvas'}!`)
+                    //dropped new component into parent (resultFromDrop.id) else Canvas
                     addDiv(resultFromDrop.id);
                 }
             },
