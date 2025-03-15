@@ -61,7 +61,7 @@ export const Login: React.FC = () => {
                                 <div className="login-card">
                                         <img src="/eyelogo.png" alt="Logo" className="logo" />
                                         <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
-                                                <h2 className="login-title">{isRegistering ? "Register Now" : "Welcome! Please log in to continue."}</h2>
+                                                <h2 className="login-title">{isRegistering ? "Register Now" : <>Welcome! <br /> Please Sign in to continue.</>}</h2>
                                                 <hr className='divider' />
                                                 {error && <p className="error-message">{error}</p>}
                                                 
@@ -69,7 +69,7 @@ export const Login: React.FC = () => {
                                 <label htmlFor="username" className="username-label">Username</label>
                                 <input
                                 type="text"
-                                placeholder="Username"
+                               //placeholder="Username"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 />
@@ -80,7 +80,7 @@ export const Login: React.FC = () => {
                         <div className="password-container">
                             <input
                                 type={showPassword ? "text" : "password"}
-                                placeholder="Password"
+                               // placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -93,7 +93,7 @@ export const Login: React.FC = () => {
                         </div>
                         </div>
 
-                                                <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', marginTop: '40px', fontSize: '20Fpx' }}>{isRegistering ? "Register" : "Sign In"}</button>
+                                                <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', width: '90%', alignSelf:'center', marginTop: '40px', fontSize: '23px' }}>{isRegistering ? "Register" : "Sign In"}</button>
                                         </form>
                                         <div className="toggle-auth">
                                                 <button
