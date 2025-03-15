@@ -35,7 +35,7 @@ export const ElementProp: React.FC = () => {
                                 <br></br>
 
                                 <div style={{ display: "flex", alignItems: "center" }}>
-                                        <label style={{ width: "150px" }}>Thickness</label>
+                                        <label style={{ width: "150px" }}>Border- Thickness</label>
                                         <input
                                                 type="number"
                                                 disabled={selected === undefined}
@@ -44,6 +44,19 @@ export const ElementProp: React.FC = () => {
                                                 style={{ marginLeft: "8px", flex: 1 }}
                                         />
                                 </div>
+
+                        
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                        <label style={{ width: "150px" }}>Border Color</label>
+                                        <input
+                                                type="color"
+                                                disabled={selected === undefined}
+                                                value={props[selected]?.borderColor || "#000000"}
+                                                onChange={(e) => dispatch(changeBorderColor({ id: selected, value: e.target.value }))}
+                                                style={{ marginLeft: "8px", flex: 1 }}
+                                        />
+                                </div>
+                         
 
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                         <label style={{ width: "150px" }}>BG Color</label>
@@ -55,25 +68,11 @@ export const ElementProp: React.FC = () => {
                                                 style={{ marginLeft: "8px", flex: 1 }}
                                         />
                                 </div>
-
-                                <div style={{ display: "flex", alignItems: "center" }}>
-                                        <label style={{ width: "150px" }}>Border Color</label>
-                                        <input
-                                                type="color"
-                                                disabled={selected === undefined}
-                                                value={props[selected]?.borderColor || "#000000"}
-                                                onChange={(e) => dispatch(changeBorderColor({ id: selected, value: e.target.value }))}
-                                                style={{ marginLeft: "8px", flex: 1 }}
-                                        />
-                                </div>
                         </div>
 
                         {/* Padding Section */}
                         <div className="padding-header">
                                 <br></br>
-                                {/* <h2 className="sidebar-title">Padding</h2> */}
-                                {/* <hr className='divider' /> */}
-
                         </div>
                         <div className="outer-box">
                                 <div className="padding-controls">
@@ -123,8 +122,6 @@ export const ElementProp: React.FC = () => {
 
                         {/* margin section */}
                         <div className="padding-header">
-                                {/* <h2 className="sidebar-title">Margin</h2>
-                        <hr className='divider' /> */}
                         </div>
                         <div className="outer-box">
                                 <div className="padding-controls">

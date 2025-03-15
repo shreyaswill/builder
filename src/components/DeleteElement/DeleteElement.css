@@ -1,4 +1,4 @@
-.delete-div-btn {
+.delete-div-btn {                  /* delete button */
     background: #dc3545;
     color: white;
     border: none;
@@ -6,20 +6,21 @@
     cursor: pointer;
     font-size:25px;
     width: 100%;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 550px;
     margin-top: 100px;
+    margin-left: 2px;
     transition: background 0.3s ease;
 }
 
 .delete-div-btn {
     background: #dc3545;
-    border-radius: 10px;
+
 }
 
 .delete-div-btn:hover {
     background: #ff5767;
-    border-radius: 60px;
+
 }

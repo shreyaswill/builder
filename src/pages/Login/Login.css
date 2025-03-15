@@ -1,11 +1,6 @@
 /* General styles */
-/* General styles */
 
-/* Add the Poppins font-family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-
-    
 
 
 .background-container {
@@ -23,8 +18,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensures the video covers the entire area */
-        z-index: -1; /* Sends the video behind the content */
+        object-fit: cover; 
+        z-index: -1; 
     }
     
 
@@ -47,11 +42,11 @@
     display: flex;
     margin-top: 1px;
     margin-bottom: 100px;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    position: absolute; /* Absolute positioning to override any other styles */
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    width: 100%;
+    position: absolute;
 }
 
 
@@ -119,13 +114,13 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        padding-top: 50px; /* Adjust padding as necessary */
+        padding-top: 50px;
     }
     
 
 
     .welcome-word {
-        color: #10c6c6; /* Teal color for the "Welcome!" part */
+        color: #10c6c6;
     }
 
 .login-card:hover {
@@ -213,21 +208,21 @@ h2 {
     margin-left: 30px;
     margin-top: 10px;
     font-weight: 100;
-    display: block;  /* Ensures it is displayed on its own line above the input */
+    display: block; 
 }
 .input-container {
         display: flex;
-        align-items: center;  /* Align the label and input horizontally */
+        align-items: center; 
         height: 100%;
-        width: 90%;   /* Space between fields */
+        width: 90%;  
     }
 
 
     .input-container2 {
         display: flex;
-        align-items: center;  /* Align the label and input horizontally */
+        align-items: center; 
        
-        width: 90%;   /* Space between fields */
+        width: 90%; 
     }
     
     .input-container input {
@@ -237,7 +232,7 @@ h2 {
         border-radius: 4px;
         padding-right: 40px; 
         border: 1px solid #ccc;
-        width: 600px; /* Adjust the width as necessary */
+        width: 600px;
     }
 
 

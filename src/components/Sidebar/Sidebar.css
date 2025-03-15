@@ -1,10 +1,9 @@
 .sidebar-title {
         font-family: 'Roboto', sans-serif;
-        font-size: 2rem; /* Use rem for font size */
+        font-size: 2rem; 
         font-weight: 200;
         align-items: flex-start;
-        /* Use vw for margin */
-        margin-bottom: 1rem; /* Use rem for margin */
+        margin-bottom: 1rem; 
         color: white;
      
     }
@@ -12,11 +11,10 @@
 
     .sidebar-title2 {
         font-family: 'Roboto', sans-serif;
-        font-size: 2rem; /* Use rem for font size */
+        font-size: 2rem;
         font-weight: 200;
         align-items: flex-start;
-        /* Use vw for margin */
-        margin-bottom: 1rem; /* Use rem for margin */
+        margin-bottom: 1rem; 
         color: white;
       
     }
@@ -28,16 +26,15 @@
         font-weight: 200;
         margin-bottom: 1rem;
         color: white;
-        text-align: left; /* Ensure titles align left */
-        width: 100%; /* Make sure titles take up the full width of the parent */
+        text-align: left;
+        width: 100%;
     }
     
     /* Divider Line */
     .divider {
         width: 100%;
-
-        margin: 0.5rem; /* Use rem for margin */
-        /* border: 1px solid #5baaff; */
+        margin: 0.5rem;
+       
       
     }
     
@@ -51,9 +48,7 @@
         max-width: 600px;
         background: linear-gradient(135deg, #07223d, #07223d);
         color: white;
-
- 
-        padding: 2rem; /* Use rem for padding */
+        padding: 2rem;
         height: 100vh;
         overflow-y: auto;
         transition: width 0.3s ease;
@@ -61,28 +56,27 @@
         flex-direction: column;
         align-items: center;
         min-width: 160px;
-        border-radius: 0;/* Use rem for border radius */
-
-        box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2); /* Adjust the shadow's intensity */
-        position: fixed; /* Ensure it's fixed on the page */
+        border-radius: 0;
+        box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
+        position: fixed; 
         top: 0;
         left: 0;
-        z-index: 1000; /* Ensure it's on top of other content */
-        transition: box-shadow 0.3s ease; /* Optional: Add smooth transition */
+        z-index: 1000; 
+        transition: box-shadow 0.3s ease;
     }
     
     /* Modern Scrollbar Styling */
     .sidebar::-webkit-scrollbar {
-        width: 0.8rem; /* Use rem for scrollbar width */
+        width: 0.8rem; 
     }
     
     .sidebar::-webkit-scrollbar-track {
         background: linear-gradient(to top, #add8e6, #ffffff);
-        border-radius: 1rem; /* Use rem for border radius */
+        border-radius: 1rem; 
     }
     
     .sidebar::-webkit-scrollbar-thumb {
-        background: #7fccff; /* scroll color  */
+        background: #7fccff; 
         border-radius: 1rem;
         transition: background 0.3s ease;
     }
@@ -92,18 +86,18 @@
     }
     
     .sidebar.collapsed {
-        width: 20vw; /* Use vw for width */
+        width: 20vw; 
     }
     
     .toggle-btn {
         background: #5baaff;
         color: white;
         border: none;
-        padding: 1rem; /* Use rem for padding */
+        padding: 1rem;
         cursor: pointer;
-        font-size: 1rem; /* Use rem for font size */
+        font-size: 1rem; 
         width: 40%;
-        margin-left: 30vw; /* Use vw for margin */
+        margin-left: 30vw; 
         text-align: center;
     }
     
@@ -122,9 +116,10 @@
         width: 100%;
         text-align: center;
         border-radius: 10px;
-        max-width: 500px;
-       font-weight: 300;
+        max-width: 550px;
+        font-weight: 500;
         transition: background 0.3s ease;
+        margin-left: 2px;
     }
     
     .logout-button:hover {

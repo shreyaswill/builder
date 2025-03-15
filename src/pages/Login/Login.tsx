@@ -47,71 +47,67 @@ export const Login: React.FC = () => {
         };
 
         return (
-
-
                 <div className="background-container">
-                         <div className="text-and-login">
+                        <div className="text-and-login">
 
-                      
-                        {/* Video background */}
-                        <video autoPlay loop muted className="background-video">
-                                <source src="./Background.mp4" type="video/mp4" />
-                        </video>
-                        <div className="login-container">
-                                <div className="login-card">
-                                        <img src="/logo.png" alt="Logo" className="logo" />
-                                        <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
-                                                <h2 className="login-title">{isRegistering ? "Register Now" : <>Welcome! <br /> Please Sign in to continue.</>}</h2>
-                                                <hr className='divider' />
-                                                {error && <p className="error-message">{error}</p>}
-                                                
-                                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <label htmlFor="username" className="username-label">Username</label>
-                                <input
-                                type="text"
-                               //placeholder="Username"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                />
-                                </div>
-                       
-                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <label htmlFor="username" className="username-label">Password</label>
-                        <div className="password-container">
-                            <input
-                                type={showPassword ? "text" : "password"}
-                               // placeholder="Password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <span 
-                                className="password-toggle" 
-                                onClick={() => setShowPassword(!showPassword)}
-                            >
-                                {showPassword ? <FaEyeSlash /> : <FaEye />}
-                            </span>
-                        </div>
-                        </div>
 
-                                                <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', width: '90%', alignSelf:'center', marginTop: '40px', fontSize: '23px' }}>{isRegistering ? "Register" : "Sign In"}</button>
-                                        </form>
-                                        <div className="toggle-auth">
-                                                <button
-                                                        className="register-button"
-                                                        onClick={() => {
-                                                                setIsRegistering(!isRegistering);
-                                                                setUsername("");
-                                                                setPassword("");
-                                                                setError("");
-                                                        }}
-                                                >
-                                                       
-                                                        {isRegistering ? "Already have an account? Login" : "Don't have an account? SIGN UP here !"}
-                                                </button>
+                                {/* Video background */}
+                                <video autoPlay loop muted className="background-video">
+                                        <source src="./Background.mp4" type="video/mp4" />
+                                </video>
+                                <div className="login-container">
+                                        <div className="login-card">
+                                                <img src="/logo.png" alt="Logo" className="logo" />
+                                                <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
+                                                        <h2 className="login-title">{isRegistering ? "Register Now" : <>Welcome! <br /> Please Sign in to continue.</>}</h2>
+                                                        <hr className='divider' />
+                                                        {error && <p className="error-message">{error}</p>}
+
+                                                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                                                <label htmlFor="username" className="username-label">Username</label>
+                                                                <input
+                                                                        type="text"
+                                                                        value={username}
+                                                                        onChange={(e) => setUsername(e.target.value)}
+                                                                />
+                                                        </div>
+
+                                                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                                                <label htmlFor="username" className="username-label">Password</label>
+                                                                <div className="password-container">
+                                                                        <input
+                                                                                type={showPassword ? "text" : "password"}
+                                                                                value={password}
+                                                                                onChange={(e) => setPassword(e.target.value)}
+                                                                        />
+                                                                        <span
+                                                                                className="password-toggle"
+                                                                                onClick={() => setShowPassword(!showPassword)}
+                                                                        >
+                                                                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                                                        </span>
+                                                                </div>
+                                                        </div>
+
+                                                        <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', width: '90%', alignSelf: 'center', marginTop: '40px', fontSize: '23px' }}>{isRegistering ? "Register" : "Sign In"}</button>
+                                                </form>
+                                                <div className="toggle-auth">
+                                                        <button
+                                                                className="register-button"
+                                                                onClick={() => {
+                                                                        setIsRegistering(!isRegistering);
+                                                                        setUsername("");
+                                                                        setPassword("");
+                                                                        setError("");
+                                                                }}
+                                                        >
+
+                                                                {isRegistering ? "Already have an account? Login" : "Don't have an account? SIGN UP here !"}
+                                                        </button>
+                                                </div>
                                         </div>
                                 </div>
                         </div>
-                </div>
                 </div>
         );
 };
