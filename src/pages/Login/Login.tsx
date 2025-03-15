@@ -82,11 +82,13 @@ export const Login: React.FC = () => {
 
                                                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                                                         <label htmlFor="username" className="username-label">Username</label>
+                                                        <div className="username-container">
                                                         <input
                                                                 type="text"
                                                                 value={username}
                                                                 onChange={(e) => setUsername(e.target.value)}
                                                         />
+                                                </div>
                                                 </div>
 
                                                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>

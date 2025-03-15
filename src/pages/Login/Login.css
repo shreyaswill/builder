@@ -47,18 +47,24 @@
     height: 100vh; 
     width: 100%;
     position: absolute;
+   
 }
 
 
-.username-label
-{
-  font-size: 18px;  
-  color: #222;   
-  font-weight: 600;
-  margin-right: 20px;
-  
+.username-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        color: #08233e;
+        margin-bottom: 8px;
+        margin-right: 25px;
+        margin-left: 30px;
+        margin-top: 10px;
+        font-weight: 500;
+        display: block; 
+        
 
-}
+    }
+
 
 
 .password-label
@@ -76,7 +82,19 @@
         align-items: center;
         width: 90%;
         margin-left: 5px;    
+        margin-right:30px;
     }
+
+
+    .username-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin-left: 0px;    
+        margin-right:30px;
+    }
+    
     
     .password-container input {
         flex: 1;
@@ -199,22 +217,13 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-.username-label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    color: #08233e;
-    margin-bottom: 8px;
-    margin-right: 25px;
-    margin-left: 30px;
-    margin-top: 10px;
-    font-weight: 100;
-    display: block; 
-}
+
 .input-container {
         display: flex;
         align-items: center; 
         height: 100%;
         width: 90%;  
+    
     }
 
 
