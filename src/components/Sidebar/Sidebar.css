@@ -42,7 +42,7 @@
     }
 
     .sidebar {
-        width: 300vw; 
+        width: 3000vw; 
         max-width: 600px;
         background: linear-gradient(135deg, #07223d, #07223d);
         color: white;
@@ -55,8 +55,7 @@
         align-items: center;
         min-width: 160px;
         border-radius: 0;
-        box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
-        position: fixed; 
+        box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);    
         top: 0;
         left: 0;
         z-index: 1000; 
