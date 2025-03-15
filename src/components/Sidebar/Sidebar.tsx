@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import { DeleteElement } from "../DeleteElement/DeleteElement";
+import { useDispatch } from "react-redux";
+import { DispatchType } from "../../redux";
+import { changeUser } from "../../redux/selected";
 import { AddElement } from "../AddElement/AddElement";
+import { DeleteElement } from "../DeleteElement/DeleteElement";
 import { ElementProp } from "../ElementProp/ElementProp";
 import "./Sidebar.css";
 
 export const SideBar: React.FC = () => {
-    const navigate = useNavigate(); 
-
+    //const navigate = useNavigate(); 
+    const dispatch = useDispatch<DispatchType>();
     const handleLogout = () => {
-        localStorage.removeItem("username");
-        navigate("/", { replace: true });
+        dispatch(changeUser())
+        //navigate("/", { replace: true });
     };
 
     return (
