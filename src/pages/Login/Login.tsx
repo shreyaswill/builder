@@ -65,33 +65,33 @@ export const Login: React.FC = () => {
                                                 <hr className='divider' />
                                                 {error && <p className="error-message">{error}</p>}
                                                 
-                                                <div className="input-container">
-                                                        <label htmlFor="username" className="username-label">Username</label>
-                                                        <input
-                                                                type="text"
-                                                                placeholder="Username"
-                                                                value={username}
-                                                                onChange={(e) => setUsername(e.target.value)}
-                                                        />
-                                                </div>
-
-                                                <div className="input-container">
-                                                        <label htmlFor="username" className="username-label">Password</label>
-
-                                                        <input
-                                                                type={showPassword ? "text" : "password"}
-                                                                placeholder="Password"
-                                                                value={password}
-                                                                onChange={(e) => setPassword(e.target.value)}
-                                                        />
-
-                                                        <span
-                                                                className="password-toggle"
-                                                                onClick={() => setShowPassword(!showPassword)}
-                                                        >
-                                                                {showPassword ? <FaEyeSlash /> : <FaEye />}
-                                                        </span>
-                                                </div>
+                                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                <label htmlFor="username" className="username-label">Username</label>
+                                <input
+                                type="text"
+                                placeholder="Username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                />
+                                </div>
+                       
+                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                <label htmlFor="username" className="username-label">Password</label>
+                        <div className="password-container">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <span 
+                                className="password-toggle" 
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            </span>
+                        </div>
+                        </div>
 
                                                 <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', marginTop: '40px', fontSize: '20Fpx' }}>{isRegistering ? "Register" : "Sign In"}</button>
                                         </form>

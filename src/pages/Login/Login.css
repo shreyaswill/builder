@@ -45,20 +45,46 @@
     position: absolute; /* Absolute positioning to override any other styles */
 }
 
-.password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
+
+.username-label
+{
+  font-size: 18px;  
+  color: #222;   
+  font-weight: 400;
+  margin-right: 20px;
 
 }
 
+
+.password-label
+{
+  font-size: 18px;  
+  color: #222;   
+  font-weight: 400;
+  margin-right: 0px;
+
+
+}
+.password-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    
+    }
+    
+    .password-container input {
+        flex: 1;
+        padding-right: 30px;
+    }
+    
     .password-toggle {
+        position: absolute;
+        right: 10px;
         cursor: pointer;
         color: #555;
-        margin-left: 20px; /* Adjust this value to bring the icon inside */
     }
-
+    
 .login-card {                      /* login card */
     background: white;
     padding: 40px 30px;
