@@ -1,14 +1,15 @@
 import { useDrop } from "react-dnd";
 import { useDispatch, useSelector } from "react-redux";
 import { DraggableTypes } from "../../constants";
-import { ElementPropState } from "../../redux/elementProps";
-import { changeElement } from "../../redux/selectedProps";
+import { getRoots } from "../../redux/build";
+import { changeElement } from "../../redux/selected";
 import { DivElement } from "../DivElement/DivElement";
 import "./Canvas.css";
+import { DispatchType, RootState } from "../../redux";
 
 export const Canvas: React.FC = () => {
-    const eprops = useSelector((state: { eprops: ElementPropState }) => state.eprops);
-    const dispatch = useDispatch();
+    const eprops = useSelector((state: RootState) => getRoots(state));
+    const dispatch = useDispatch<DispatchType>();
 
     const [{ isOver, canDrop }, dropRef] = useDrop(() => {
         return {
@@ -31,8 +32,8 @@ export const Canvas: React.FC = () => {
     return (
         <div ref={dropRef as unknown as React.RefObject<HTMLDivElement>} className={`main-content ${isActive ? 'dragging' : ''}`} onClick={() => dispatch(changeElement(undefined))}>
             {isActive && <div className="dragtext">Release to drop</div>}
-            {eprops.roots.length === 0 && <h1>Let's get started !</h1>}
-            {eprops.roots.map((id) => (
+            {eprops?.length === 0 && <h1>Let's get started !</h1>}
+            {eprops?.map((id) => (
                 <DivElement key={id} id={id} />
             ))}
         </div>

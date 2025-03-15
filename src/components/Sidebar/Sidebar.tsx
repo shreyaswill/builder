@@ -1,15 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import { DeleteElement } from "../DeleteElement/DeleteElement";
+import { useDispatch, useSelector } from "react-redux";
+import { DispatchType, RootState } from "../../redux";
+import { changeUser, getSelectedElementId } from "../../redux/selected";
 import { AddElement } from "../AddElement/AddElement";
+import { DeleteElement } from "../DeleteElement/DeleteElement";
 import { ElementProp } from "../ElementProp/ElementProp";
 import "./Sidebar.css";
 
 export const SideBar: React.FC = () => {
-    const navigate = useNavigate(); 
-
+    const dispatch = useDispatch<DispatchType>();
+    const selectedId = useSelector((state: RootState) => getSelectedElementId(state));
     const handleLogout = () => {
-        localStorage.removeItem("username");
-        navigate("/", { replace: true });
+        dispatch(changeUser())
     };
 
     return (
@@ -19,11 +20,9 @@ export const SideBar: React.FC = () => {
             <AddElement />
             <br></br>
             <br></br>
-            <h2 className='sidebar-title'>Styling</h2>
-            <hr className='divider' />
-            <ElementProp />
+            {selectedId && <ElementProp />}
             <br />
-            <DeleteElement />
+            {selectedId && <DeleteElement />}
             <br />
             <button onClick={handleLogout} className="logout-button">
                 Logout
