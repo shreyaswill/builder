@@ -26,10 +26,8 @@ export const selected = createSlice({
                 state.users[state.currentUserId].nextId += 1;
         },
         changeUser: (state, {payload: id}: PayloadAction<string | undefined>) => {
-            if (id && !state.currentUserId) {
-                state.users[id] = {
-                    nextId: 1
-                }
+            if (id && !state.users[id]) {
+                state.users[id] = {nextId: 1}
             }
             state.currentUserId = id;
         }
