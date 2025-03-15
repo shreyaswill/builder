@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import { SideBar } from "../../components/Sidebar/Sidebar";
 import { Canvas } from "../../components/Canvas/Canvas";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 export const Home: React.FC = () => {
     const navigate = useNavigate();
@@ -14,10 +16,14 @@ export const Home: React.FC = () => {
         }
     }, [navigate]);
 
+    
+
     return (
         <div className="container">
-            <SideBar /> 
-            <Canvas />
+            <DndProvider backend={HTML5Backend}>
+                <SideBar /> 
+                <Canvas />
+            </DndProvider>
         </div>
     );
 };

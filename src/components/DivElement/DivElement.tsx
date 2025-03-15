@@ -1,7 +1,9 @@
+import "./DivElement.css"
 import { useDispatch, useSelector } from "react-redux";
 import { ElementPropState } from "../../redux/elementProps";
 import { changeElement, SelectedPropState } from "../../redux/selectedProps";
-import "./DivElement.css"
+import { useDrop } from "react-dnd";
+import { DraggableTypes } from "../../constants";
 
 export const DivElement: React.FC<{ id: number }> = ({ id }) => {
 
@@ -9,12 +11,30 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
     const element = useSelector((state: {eprops: ElementPropState}) => state.eprops.elements[id]);
     const selected = useSelector((state: {selected: SelectedPropState}) => state.selected.elementId);
 
+    const [{ isOver, canDrop }, dropRef] = useDrop(() => ({
+        accept: DraggableTypes.DIV_ELEMENT,
+        drop: (item, monitor) => {
+            const isOwner = monitor.isOver({shallow: true});
+            if (isOwner)
+                return {id}//parent id
+        },
+        collect: (monitor) => {
+            return {
+                isOver: monitor.isOver({ shallow: true }),
+                canDrop: monitor.canDrop()
+            };
+        },
+    }));
+
     if (!element) return null;
     const updateSelected = (id:number | null) => {
         if (id !== null) dispatch(changeElement(id));
     }
+    
+    const isActive = canDrop && isOver
+
     return (
-        <div
+        <div ref={dropRef as unknown as React.RefObject<HTMLDivElement>}
             style={{
                 height: element.height,
                 width: element.width,
@@ -35,7 +55,7 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
                 updateSelected(selected === id ? null : id)}
             }
         >
-            <p>Div {id}</p>
+            <p>{isActive ? 'Drop here' : `Div ${id}`}</p>
             {element.children.length > 0 && element.children.map((childId) => (
                 <DivElement key={childId} id={childId} />
             ))}

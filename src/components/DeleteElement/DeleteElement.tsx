@@ -10,6 +10,7 @@ export const DeleteElement: React.FC = () => {
         dispatch(deleteElement(selected));
         dispatch(changeElement(undefined));
     };
+
     return (
         <button className="delete-div-btn" onClick={deleteE} disabled={!selected}>
             Delete Div
