@@ -4,7 +4,8 @@
         border-color: #007bff;
         color: black;
         gap: 10px;
-        max-width: 100%; 
+        max-width: 100%;
+
     }
     
     .padding-header h3 {
@@ -20,10 +21,12 @@
             "top"
             "left right"
             "bottom";
-        gap: 1px;
+        /* Increased gap between all items */
+        row-gap: 40px; /* Keep row gap as desired */
+        column-gap: 20px; /* Added to increase the gap between left and right */
         justify-items: center;
     }
-    
+
     .side-paddings {
         display: flex;
         gap: 10px;

@@ -21,13 +21,12 @@ export const SideBar: React.FC = () => {
             <AddElement />
             <br></br>
             <br></br>
-            <h2 className='sidebar-title'>Styling</h2>
+            <h2 className='sidebar-title2'>Styling</h2>
             <hr className='divider' />
             <ElementProp />
             <br />
             <DeleteElement />
             <br />
-            <Save />
             <br />
             <button onClick={handleLogout} className="logout-button">
                 Logout

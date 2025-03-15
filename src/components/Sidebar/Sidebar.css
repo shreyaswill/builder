@@ -2,9 +2,23 @@
         font-family: 'Roboto', sans-serif;
         font-size: 2rem; /* Use rem for font size */
         font-weight: 200;
+        margin-right: 360px;
         /* Use vw for margin */
         margin-bottom: 1rem; /* Use rem for margin */
-        color: #5baaff;
+        color: white;
+        margin-right: 370px;
+    }
+
+
+    .sidebar-title2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem; /* Use rem for font size */
+        font-weight: 200;
+        margin-right: 360px;
+        /* Use vw for margin */
+        margin-bottom: 1rem; /* Use rem for margin */
+        color: white;
+        margin-right: 420px;
     }
 
     
@@ -13,7 +27,8 @@
         width: 100%;
         margin-right: 10vw; /* Use vw for margin */
         margin: 0.5rem; /* Use rem for margin */
-        border: 1px solid #5baaff;
+        /* border: 1px solid #5baaff; */
+        border: 1px solid white;
     }
     
     body, .sidebar {
@@ -23,7 +38,7 @@
     
     .sidebar {
         width: 50vw; /* Use vw for width */
-        background: linear-gradient(135deg, #fafcff, #4db4ff);
+        background: linear-gradient(135deg, #07223d, #07223d);
         color: white;
         max-width: 600px;
         padding: 2rem; /* Use rem for padding */
@@ -48,13 +63,13 @@
     }
     
     .sidebar::-webkit-scrollbar-thumb {
-        background: #6bbaff;
+        background: #ff914d;
         border-radius: 1rem;
         transition: background 0.3s ease;
     }
     
     .sidebar::-webkit-scrollbar-thumb:hover {
-        background: #5baaff;
+        background: #ff914d;
     }
     
     .sidebar.collapsed {
@@ -79,15 +94,18 @@
     
     /* Logout Button */
     .logout-button {
-        margin-top: 2rem; /* Use rem for margin */
-        padding: 1rem 2rem; /* Use rem for padding */
-        background-color: #dc3545;
+        background: #78879d;
         color: white;
         border: none;
-        border-radius: 0.8rem; /* Use rem for border radius */
+        padding: 12px;
         cursor: pointer;
-        font-size: 1rem; /* Use rem for font size */
-        transition: background-color 0.3s ease;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        max-width: 500px;
+       
+        transition: background 0.3s ease;
     }
     
     .logout-button:hover {
