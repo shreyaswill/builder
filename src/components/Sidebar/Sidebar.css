@@ -62,6 +62,13 @@
         align-items: center;
         min-width: 160px;
         border-radius: 1rem; /* Use rem for border radius */
+
+        box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2); /* Adjust the shadow's intensity */
+        position: fixed; /* Ensure it's fixed on the page */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Ensure it's on top of other content */
+        transition: box-shadow 0.3s ease; /* Optional: Add smooth transition */
     }
     
     /* Modern Scrollbar Styling */
@@ -121,7 +128,7 @@
     }
     
     .logout-button:hover {
-        background-color: #ff5767;
+        background-color: #c6d2e4;
     }
     
     /* Hover effects for buttons */
