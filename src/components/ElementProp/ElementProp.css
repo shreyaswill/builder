@@ -6,26 +6,29 @@
         gap: 10px;
         max-width: 100%;
         font-size: 25px;
-      
         margin-right: 2px;
-
-    
 
     }
 
     .controls input {
-        border: 2px solid #007bff; 
+        border: none;
         background-color: #003568;
         color: white;
-        margin-right: 8px;
         margin-bottom: 1px;
-      
+        font-size: 25px;
+        outline: none;
+        border-bottom: 2px solid transparent; 
+        transition: border-bottom 0.2s ease-in-out; 
+
+    }
+    
+    .controls input:focus {
+        color: white;
+        background-color: rgb(4, 22, 57);
+        border-bottom: 2px solid #007bff; 
+        outline: none;
     }
 
-    .controls input:focus {                         /* TOP FOCUS */
-        color: PINK; 
-        outline: none; 
-    }
 
     .padding-header h3 {                    
         margin: 0;
