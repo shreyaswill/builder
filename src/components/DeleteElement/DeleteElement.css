@@ -14,13 +14,14 @@
         margin-left: 2px;
         transition: background 0.3s ease;
     }
-
-.delete-div-btn {
-    background: #dc3545;
-    border-radius: 60px;
-}
-
-.delete-div-btn:hover {
-    background: #ff5767;
-    border-radius: 60px;
-}
+    
+    .delete-div-btn {
+        background: #dc3545;
+    
+    }
+    
+    .delete-div-btn:hover {
+        background: #ff5767;
+    
+    }
+    
