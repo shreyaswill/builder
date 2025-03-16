@@ -47,7 +47,7 @@
     height: 100vh; 
     width: 100%;
     position: absolute;
-    transform: scale(0.5); 
+    transform: scale(0.7); 
     transform-origin: center;
 }
 
