@@ -1,7 +1,7 @@
 # Page Builder (React + TypeScript + Vite)
 
 
-##Overview 
+## Overview 
 
 This project is a simple page builder, similar to Elementor, allowing users to drag and drop elements onto a main page. It supports:
 
@@ -52,13 +52,13 @@ link to the hosted version.
 ## Additional Details
 
 src  
-│── assets/        # Stores images, icons.
-│── components/    # Contains reusable UI components (buttons, draggable elements, modals).
-│── pages/         # Includes key pages like the login page and the main page builder. 
-│── redux/         # Manages global state using Redux (actions, reducers, and store).  
-│── routes/        # Defines application routes for navigation.
-│── main.tsx       # Entry point of the React app  
-│── App.tsx        # Root component  
+│── assets/        # Stores images, icons. <br>
+│── components/    # Contains reusable UI components (buttons, draggable elements, modals). <br>
+│── pages/         # Includes key pages like the login page and the main page builder.  <br>
+│── redux/         # Manages global state using Redux (actions, reducers, and store).   <br>
+│── routes/        # Defines application routes for navigation. <br>
+│── main.tsx       # Entry point of the React ap.p   <br>
+│── App.tsx        # Root component.   <br>
 
 
 ## Data Storage
