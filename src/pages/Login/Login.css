@@ -54,7 +54,7 @@
 
 .username-label {
         font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 18px;
         color: #08233e;
         margin-bottom: 8px;
         margin-right: 25px;
@@ -94,6 +94,11 @@
         width: 90%;
         margin-left: 0px;    
         margin-right:30px;
+        
+    }
+
+    .username-container input{
+        font-size: 18px;
     }
     
     
@@ -124,7 +129,7 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
-    margin-bottom: 200px;
+    margin-bottom: 140px;
     position: relative; 
 }
 
@@ -211,7 +216,7 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 

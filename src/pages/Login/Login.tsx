@@ -108,7 +108,7 @@ export const Login: React.FC = () => {
                                                         </div>
                                                 </div>
 
-                                                <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', width: '90%', alignSelf: 'center', marginTop: '40px', fontSize: '23px' }}>{isRegistering ? "Register" : "Sign In"}</button>
+                                                <button type="submit" style={{ backgroundColor: '#10c6c6', color: 'white', width: '90%', alignSelf: 'center', marginTop: '40px', fontSize: '24px' }}>{isRegistering ? "Register" : "Sign In"}</button>
                                         </form>
                                         <div className="toggle-auth">
                                                 <button
