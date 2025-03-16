@@ -14,8 +14,7 @@ export const DivElement: React.FC<{ id: number }> = ({ id }) => {
 
     const [{ isOver, canDrop }, dropRef] = useDrop(() => ({
         accept: DraggableTypes.DIV_ELEMENT,
-        drop: (item, monitor) => {
-            console.log(item);
+        drop: (_, monitor) => {
             const isOwner = monitor.isOver({shallow: true});
             if (isOwner)
                 return {id}//parent id
