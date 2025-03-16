@@ -70,11 +70,11 @@ export const Login: React.FC = () => {
 
                         {/* Video background */}
                         <video autoPlay loop muted className="background-video">
-                                <source src="src/assets/Background.mp4" type="video/mp4" />
+                                <source src="Background.mp4" type="video/mp4" />
                         </video>
                         <div className="login-container">
                                 <div className="login-card">
-                                        <img src="src/assets/brandlogo.png" alt="Logo" className="logo" />
+                                        <img src="brandlogo.png" alt="Logo" className="logo" />
                                         <form onSubmit={isRegistering ? handleRegister : handleLogin} className="login-form">
                                                 <h2 className="login-title">{isRegistering ? "Register Now" : <>Welcome! <br /> Please Sign in to continue.</>}</h2>
                                                 <hr className='divider' />
