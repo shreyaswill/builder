@@ -21,8 +21,8 @@ This project is a simple page builder, similar to Elementor, allowing users to d
 ### 1. Clone the Repository
 
 ```js
-git clone <your-repository-url>
-cd <your-project-folder>
+git clone <repository-url>
+cd <project-folder>
 ```
 
 ### 2. Install Dependencies
@@ -53,7 +53,7 @@ link to the hosted version.
 
 src  
 │── **assets/** → Stores images, icons  
-│── **components/** → Contains reusable UI components (buttons, draggable elements, modals)  
+│── **components/** → Contains reusable UI components (buttons, draggable elements)  
 │── **pages/** → Includes key pages like the login page and the main page builder  
 │── **redux/** → Manages global state using Redux (actions, reducers, and store)  
 │── **routes/** → Defines application routes for navigation  
@@ -67,16 +67,16 @@ This project uses Redux Toolkit for state management and local storage (via Redu
 
 ### Redux State Management
 
-:one:**build.ts:** Stores the drag-and-drop elements for each user, handling creation, updates, and deletions.
+:one:**build.ts:**    -Stores the drag-and-drop elements for each user, handling creation, updates, and deletions.
 
-:two:**selected.ts:** Tracks the currently selected user and element, ensuring UI interactions update correctly.
+:two:**selected.ts:** -Tracks the currently selected user and element, ensuring UI interactions update correctly.
 
-:three:**users.ts:** Manages user registration and authentication details.
+:three:**users.ts:** -Manages user registration and authentication details.
 
 
 ### Local Storage Persistence
 
-he Redux store is persisted using redux-persist, so data (elements, users, selections) remains saved even after a page refresh.
+The Redux store is persisted using redux-persist, so data (elements, users, selections) remains saved even after a page refresh.
 
 The persistConfig in index.ts ensures that all state is stored in the browser’s local storage.
 
