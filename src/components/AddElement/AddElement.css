@@ -1,22 +1,24 @@
-.add-div-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 12px;
+.tooltip {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    font-size: 14px;
-    width: 100%;
-    margin-top: 30px;
-    text-align: center;
-    max-width: 200px;
-    border-style: solid;
-    border-color: #007bff;
-    border-width: 2px; 
-    border-radius: 30px;        
-    transition: background 0.3s ease;
-    
 }
 
-.add-div-btn:hover {
-    background: #d4e9ff;
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    color: #07223d;
+    padding: 4px;
+    border-radius: 12px;
+    position: absolute;
+    transform: translate(-66%, 121%);
+    width: 170px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 1px 0px 13px 2px var(--text-color);
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 0.8;
 }

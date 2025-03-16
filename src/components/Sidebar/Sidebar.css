@@ -1,105 +1,63 @@
-.sidebar-title {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2rem; /* Use rem for font size */
-        font-weight: 200;
-        /* Use vw for margin */
-        margin-bottom: 1rem; /* Use rem for margin */
-        color: #5baaff;
-    }
+.sidebar {
+    display: flex;
+    flex-grow: 0;
+    max-width: 10%;
+    background: linear-gradient(135deg, var(--background-color), var(--secondary-color));
+    color: white;
+    padding: 24px 16px 24px 16px;
+    height: 100vh;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    min-width: 280px;
+    box-shadow: 5px 5px 20px 4px var(--background-color);
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+    gap: 8px;
+}
 
-    
-    /* Divider Line */
-    .divider {
-        width: 100%;
-        margin-right: 10vw; /* Use vw for margin */
-        margin: 0.5rem; /* Use rem for margin */
-        border: 1px solid #5baaff;
-    }
-    
-    body, .sidebar {
-        overflow-x: hidden;
-    }
+.sidebar h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
 
-    
-    .sidebar {
-        width: 50vw; /* Use vw for width */
-        background: linear-gradient(135deg, #fafcff, #4db4ff);
-        color: white;
-        max-width: 600px;
-        padding: 2rem; /* Use rem for padding */
-        height: 100vh;
-        overflow-y: auto;
-        transition: width 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 160px;
-        border-radius: 1rem; /* Use rem for border radius */
-    }
-    
-    /* Modern Scrollbar Styling */
-    .sidebar::-webkit-scrollbar {
-        width: 0.8rem; /* Use rem for scrollbar width */
-    }
-    
-    .sidebar::-webkit-scrollbar-track {
-        background: linear-gradient(to top, #add8e6, #ffffff);
-        border-radius: 1rem; /* Use rem for border radius */
-    }
-    
-    .sidebar::-webkit-scrollbar-thumb {
-        background: #6bbaff;
-        border-radius: 1rem;
-        transition: background 0.3s ease;
-    }
-    
-    .sidebar::-webkit-scrollbar-thumb:hover {
-        background: #5baaff;
-    }
-    
-    .sidebar.collapsed {
-        width: 20vw; /* Use vw for width */
-    }
-    
-    .toggle-btn {
-        background: #5baaff;
-        color: white;
-        border: none;
-        padding: 1rem; /* Use rem for padding */
-        cursor: pointer;
-        font-size: 1rem; /* Use rem for font size */
-        width: 40%;
-        margin-left: 30vw; /* Use vw for margin */
-        text-align: center;
-    }
-    
-    .toggle-btn:hover {
-        background: #2980b9;
-    }
-    
-    /* Logout Button */
-    .logout-button {
-        margin-top: 2rem; /* Use rem for margin */
-        padding: 1rem 2rem; /* Use rem for padding */
-        background-color: #dc3545;
-        color: white;
-        border: none;
-        border-radius: 0.8rem; /* Use rem for border radius */
-        cursor: pointer;
-        font-size: 1rem; /* Use rem for font size */
-        transition: background-color 0.3s ease;
-    }
-    
-    .logout-button:hover {
-        background-color: #ff5767;
-    }
-    
-    /* Hover effects for buttons */
-    button, .toggle-btn, .logout-button {
-        transition: transform 0.2s ease;
-    }
-    
-    button:hover, .toggle-btn:hover, .logout-button:hover {
-        transform: scale(1.05);
-    }
-    
+.sidebar .divider {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.sidebar button {
+    width: 60%;
+    font-size: 15px;
+}
+
+.sidebar .logout-btn {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+
+}
+
+.logout-btn:hover {
+    background: #007bff;
+
+}
+
+.justifiedbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.justifiedbox label {
+    width: 50%;
+}
+
+.justifiedbox input {
+    width: 90px;
+    text-align: center;
+}

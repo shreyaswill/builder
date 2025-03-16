@@ -1,51 +1,114 @@
 .controls {
     display: flex;
     flex-direction: column;
-    border-color: #007bff;
-    color: black;
+    font-weight: 400;
+    color: white;
     gap: 10px;
-    max-width: 100%; 
+    width: 100%;
+    max-width: 100%;
 }
+
+.controls input {
+    border: none;
+    background-color: #003568;
+    color: white;
+    margin-bottom: 1px;
+    font-size: 18px;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease-in-out;
+    
+}
+
+.controls input:focus {
+    color: white;
+    background-color: rgb(4, 22, 57);
+    border-bottom: 2px solid #007bff;
+    outline: none;
+}
+
 
 .padding-header h3 {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 10px;
+
 }
 
 .padding-controls {
     display: grid;
-    grid-template-areas:
-        "top"
-        "left right"
-        "bottom";
-    gap: 1px;
     justify-items: center;
+    gap: 4px;
 }
+
+.top {
+    grid-area: top;
+}
+
+.left {
+    grid-area: left;
+}
+
+.center {
+    grid-area: center;
+}
+
+.right {
+    grid-area: right;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+
+.center {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    align-self: end;
+    margin-bottom: 8px;
+    border-bottom: 2px solid;
+    border-color: var(--primary-color);
+}
+
+.outer-box {
+    border: 2px solid #053465;
+    background-color: #08233e;
+    padding: 4px;
+    height: auto;
+    width: 100%;
+}
+
 
 .side-paddings {
     display: flex;
+    width: 100%;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
 }
 
 .padding-label {
     display: flex;
     flex-direction: column;
-    color:black;
-    align-items: center;
+    color: white;
+    text-align: center;
     justify-content: center;
-    width: 90px;
+    align-items: center;
+    font-size: 14px;
 }
 
 .padding-input {
-    width: 90px;
-    font-size: 14px;
-    height: 40px; 
-    padding: 3px;
-    border-color: #007bff;
+    width: 60px;
+    height: 40px;
     text-align: center;
+}
+
+.padding-input:focus {
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 600px) {
@@ -55,5 +118,6 @@
             "left right"
             "bottom bottom";
         grid-template-columns: 1fr;
+        /* Stacking elements in a single column on smaller screens */
     }
 }

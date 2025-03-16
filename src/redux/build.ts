@@ -41,7 +41,7 @@ export const userBuild = createSlice({
         addElement: (state, { payload: {userId, pid, id } }: PayloadAction<{ userId: string, pid?: number; id: number }>) => {
             const props = {...DEFAULT_PROPS, parent: pid};//get default and add parent if exists
             state[userId].elements[id] = props;
-            if (!pid) state[userId].roots.push(id); //when no parent, it's root
+            if (!pid) state[userId].roots.push(id); //when no parent, sooo it's root
             else state[userId].elements[pid].children.push(id);
         },
         deleteElement: (state, { payload: {userId, id} }) => {
@@ -84,7 +84,7 @@ export const addElement = createAsyncThunk<void, {pid?: number; id: number}, {st
     "build/addElementThunk",
     async ({pid, id}, { getState, dispatch }) => {
         const userId = getState().selected.currentUserId;//Get user id from selected slice
-        if (userId) //call reducer function if userId exists
+        if (userId)                                      //call reducer function if userId exists
             dispatch(userBuild.actions.addElement({userId, pid, id}));
     }
 );
@@ -93,7 +93,7 @@ export const deleteElement = createAsyncThunk<void, number, {state: RootState}>(
     "build/deleteElementThunk",
     async (id, { getState, dispatch }) => {
         const userId = getState().selected.currentUserId;//Get user id from selected slice
-        if (userId) //call reducer function if userId exists
+        if (userId)                                     //call reducer function if userId exists
             dispatch(userBuild.actions.deleteElement({userId, id}));
     }
 );

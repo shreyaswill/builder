@@ -1,12 +1,12 @@
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    align-content: flex-start;    
     background: #ecf0f1;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     align-items: flex-start;
     overflow: auto;
+    padding: 16px;
 }
 
 .dragtext {
