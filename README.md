@@ -52,13 +52,13 @@ link to the hosted version.
 ## Additional Details
 
 src  
-│── assets/        # Stores images, icons. <br>
-│── components/    # Contains reusable UI components (buttons, draggable elements, modals). <br>
-│── pages/         # Includes key pages like the login page and the main page builder.  <br>
-│── redux/         # Manages global state using Redux (actions, reducers, and store).   <br>
-│── routes/        # Defines application routes for navigation. <br>
-│── main.tsx       # Entry point of the React ap.p   <br>
-│── App.tsx        # Root component.   <br>
+│── assets/ &nbsp;&nbsp;&nbsp;&nbsp; <!-- Stores images, icons. --> <br>
+│── components/ &nbsp;&nbsp;&nbsp;   <!-- Contains reusable UI components (buttons, draggable elements, modals).   --> <br>
+│── pages/  &nbsp;&nbsp;&nbsp;&nbsp; <!-- Includes key pages like the login page and the main page builder.  --> <br>
+│── redux/  &nbsp;&nbsp;&nbsp;&nbsp; <!-- Manages global state using Redux (actions, reducers, and store).  --> <br>
+│── routes/ &nbsp;&nbsp;&nbsp;&nbsp; <!-- Defines application routes for navigation. --> <br>
+│── main.tsx  &nbsp;&nbsp;&nbsp;     <!-- Entry point of the React ap.p --> <br>
+│── App.tsx   &nbsp;&nbsp;&nbsp;     <!-- Root component.  --> <br>
 
 
 ## Data Storage
@@ -67,11 +67,11 @@ This project uses Redux Toolkit for state management and local storage (via Redu
 
 ### Redux State Management
 
-build.ts: Stores the drag-and-drop elements for each user, handling creation, updates, and deletions.
+**build.ts:** Stores the drag-and-drop elements for each user, handling creation, updates, and deletions.
 
-selected.ts: Tracks the currently selected user and element, ensuring UI interactions update correctly.
+**selected.ts:** Tracks the currently selected user and element, ensuring UI interactions update correctly.
 
-users.ts: Manages user registration and authentication details.
+**users.ts:** Manages user registration and authentication details.
 
 
 ### Local Storage Persistence
