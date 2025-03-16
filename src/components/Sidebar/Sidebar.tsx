@@ -14,18 +14,16 @@ export const SideBar: React.FC = () => {
     };
 
     return (
-        <div className='sidebar'>
-           <h2 className='sidebar-title2'>Elements</h2>
+        <div className="sidebar">
+            <h2>Elements</h2>
             <hr className='divider' />
-            <br></br>
             <AddElement />
-            <br></br>
-            <br></br>
+            <br/>
             {selectedId && <ElementProp />}
             <br />
             {selectedId && <DeleteElement />}
             <br />
-            <button onClick={handleLogout} className="logout-button">
+            <button onClick={handleLogout} className="logout-btn">
                 Logout
             </button>
         </div>
