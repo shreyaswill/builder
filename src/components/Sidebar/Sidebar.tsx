@@ -18,10 +18,10 @@ export const SideBar: React.FC = () => {
             <h2>Elements</h2>
             <hr className='divider' />
             <AddElement />
-            <br/>
-            {selectedId && <ElementProp />}
             <br />
             {selectedId && <DeleteElement />}
+            <br/>
+            {selectedId && <ElementProp />}
             <br />
             <button onClick={handleLogout} className="logout-btn">
                 Logout

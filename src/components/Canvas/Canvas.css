@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     overflow: auto;
+    padding: 16px;
 }
 
 .dragtext {

@@ -16,7 +16,7 @@ export const ElementProp: React.FC = () => {
             <br></br>
             <div className="controls">
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                    <div className = 'justifiedbox'>
+                    <div className="justifiedbox">
                         <label>Width</label>
                         <input
                             type="number"
@@ -35,8 +35,8 @@ export const ElementProp: React.FC = () => {
                         />
                     </div>
 
-                    <div  className = 'justifiedbox'>
-                        <label style={{ width: "150px" }}>Height</label>
+                    <div className="justifiedbox">
+                        <label>Height</label>
                         <input
                             type="number"
                             disabled={selectedId === undefined}
@@ -51,13 +51,12 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                            style={{ marginLeft: "8px", flex: 1 }}
                         />
                     </div>
                     <br></br>
 
-                    <div  className = 'justifiedbox'>
-                        <label style={{ width: "150px" }}>Border- Thickness</label>
+                    <div className="justifiedbox">
+                        <label>Border thickness</label>
                         <input
                             type="number"
                             disabled={selectedId === undefined}
@@ -72,11 +71,10 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                            style={{ marginLeft: "8px", flex: 1 }}
                         />
                     </div>
-                    <div  className = 'justifiedbox'>
-                        <label style={{ width: "150px" }}>Border Color</label>
+                    <div className="justifiedbox">
+                        <label>Border color</label>
                         <input
                             type="color"
                             disabled={selectedId === undefined}
@@ -91,12 +89,11 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                            style={{ marginLeft: "8px", flex: 1 }}
                         />
                     </div>
 
-                    <div  className = 'justifiedbox'>
-                        <label style={{ width: "150px" }}>BG Color</label>
+                    <div className="justifiedbox">
+                        <label>BG color</label>
                         <input
                             type="color"
                             disabled={selectedId === undefined}
@@ -111,7 +108,6 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                            style={{ marginLeft: "8px", flex: 1 }}
                         />
                     </div>
                 </div>

@@ -41,13 +41,15 @@ button {
   font-family: inherit;
   background-color: var(--primary-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: transform 0.4s ease-out;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+button:hover {
+  transform: scale(1.02);
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

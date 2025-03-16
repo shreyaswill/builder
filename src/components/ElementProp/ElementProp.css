@@ -4,10 +4,8 @@
     font-weight: 400;
     color: white;
     gap: 10px;
+    width: 100%;
     max-width: 100%;
-    font-size: 15px;
-    margin-right: 2px;
-
 }
 
 .controls input {
