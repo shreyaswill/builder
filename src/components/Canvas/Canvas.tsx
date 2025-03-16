@@ -15,6 +15,7 @@ export const Canvas: React.FC = () => {
         return {
             accept: DraggableTypes.DIV_ELEMENT,
             drop: (item, monitor) => {
+                console.log(item);
                 const isOwner = monitor.isOver({shallow: true});
                 if (isOwner)
                     return {id: undefined}//no parent id
