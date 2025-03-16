@@ -1,6 +1,6 @@
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    align-content: flex-start;    
     background: #ecf0f1;
     display: flex;
     flex-wrap: wrap;

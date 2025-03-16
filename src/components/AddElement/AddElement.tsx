@@ -35,7 +35,7 @@ export const AddElement: React.FC = () => {
         return (
                 <button
                         ref={dragRef as unknown as React.RefObject<HTMLButtonElement>}
-                        className="add-div-btn tooltip"
+                        className="tooltip"
                         onClick={() => addDiv(selected.selectedId)}
                         style={{ opacity: propObject.opacity }}
                 >

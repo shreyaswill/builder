@@ -11,12 +11,12 @@ export const ElementProp: React.FC = () => {
 
     return (
         <>
-            <h2 className="sidebar-title">Styling</h2>
+            <h2>Styling</h2>
             <hr className="divider" />
             <br></br>
             <div className="controls">
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div  className = 'justifiedbox'>
                         <label>Width</label>
                         <input
                             type="number"
@@ -32,11 +32,11 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                            style={{ marginLeft: "8px", flex: 1 }}
+                           
                         />
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div  className = 'justifiedbox'>
                         <label style={{ width: "150px" }}>Height</label>
                         <input
                             type="number"
@@ -57,7 +57,7 @@ export const ElementProp: React.FC = () => {
                     </div>
                     <br></br>
 
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div  className = 'justifiedbox'>
                         <label style={{ width: "150px" }}>Border- Thickness</label>
                         <input
                             type="number"
@@ -76,7 +76,7 @@ export const ElementProp: React.FC = () => {
                             style={{ marginLeft: "8px", flex: 1 }}
                         />
                     </div>
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div  className = 'justifiedbox'>
                         <label style={{ width: "150px" }}>Border Color</label>
                         <input
                             type="color"
@@ -96,7 +96,7 @@ export const ElementProp: React.FC = () => {
                         />
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div  className = 'justifiedbox'>
                         <label style={{ width: "150px" }}>BG Color</label>
                         <input
                             type="color"

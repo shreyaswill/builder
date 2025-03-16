@@ -5,7 +5,7 @@
     color: white;
     gap: 10px;
     max-width: 100%;
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 2px;
 
 }
@@ -19,6 +19,7 @@
     outline: none;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s ease-in-out;
+    
 }
 
 .controls input:focus {
