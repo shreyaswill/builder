@@ -16,7 +16,7 @@ export const ElementProp: React.FC = () => {
             <br></br>
             <div className="controls">
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                    <div  className = 'justifiedbox'>
+                    <div className = 'justifiedbox'>
                         <label>Width</label>
                         <input
                             type="number"
@@ -32,7 +32,6 @@ export const ElementProp: React.FC = () => {
                                     })
                                 )
                             }
-                           
                         />
                     </div>
 
